@@ -1,0 +1,27 @@
+{
+  "name": "shark-tank-for-science",
+  "version": "0.1.0",
+  "description": "A Mozaik pitch room where scout, shark, critic and writer agents find researcher and company pairs worth a joint project or an industrial PhD.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "data": "node scripts/fetch-data.mjs",
+    "start": "tsx src/main.ts",
+    "replay": "tsx src/main.ts --replay recordings/main-run.json",
+    "mock": "tsx src/main.ts --mock",
+    "reverse": "tsx src/main.ts --problem",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mozaik-ai/core": "4.2.0",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
