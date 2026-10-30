@@ -11,7 +11,7 @@ import {
 } from "@mozaik-ai/core"
 import type { PitchRoomState } from "../room/state"
 import type { Recording } from "./recording"
-import { Throttle, isRetryable, retryDelayMs, sleep } from "./throttle"
+import { Throttle, isDailyQuota, isRetryable, retryDelayMs, sleep } from "./throttle"
 
 // Every model call in the room goes through this runner. It is plugged into Mozaik
 // through `inferenceRunnerConfig.runner`, so the agent loops stay untouched and
@@ -70,6 +70,13 @@ export class PitchRoomRunner implements InferenceRunner {
 			return this.output(call.text, call.inputTokens, call.outputTokens, call.reasoningTokens, { replay: true })
 		}
 
+		// Resuming a run that stopped half way (free tier quotas): reuse answers already recorded.
+		const cached = this.recording.calls[key]
+		if (cached) {
+			st.trace.log("model.cached", agent, { key })
+			return this.output(cached.text, cached.inputTokens, cached.outputTokens, cached.reasoningTokens, { cached: true })
+		}
+
 		let lastError: unknown
 		for (let attempt = 0; attempt < 7; attempt++) {
 			await this.throttle.acquire()
@@ -82,10 +89,13 @@ export class PitchRoomRunner implements InferenceRunner {
 				st.trace.log("model.retry", agent, { key, attempt, error: String((error as any)?.message ?? error).slice(0, 300) })
 				if (!isRetryable(error)) break
 				// Busy or out of quota on the bigger model: fall back to the light one.
-				if (attempt >= 1 && this.fallbackModel && input.model !== this.fallbackModel) {
-					st.trace.log("model.fallback", agent, { key, from: input.model, to: this.fallbackModel })
+				const daily = isDailyQuota(error)
+				if ((attempt >= 1 || daily) && this.fallbackModel && input.model !== this.fallbackModel) {
+					st.trace.log("model.fallback", agent, { key, from: input.model, to: this.fallbackModel, reason: daily ? "daily quota" : "busy" })
 					input = { ...input, model: this.fallbackModel }
+					continue
 				}
+				if (daily) break
 				await sleep(retryDelayMs(error, attempt))
 				continue
 			}

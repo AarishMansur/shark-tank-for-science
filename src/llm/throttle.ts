@@ -34,7 +34,8 @@ export const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms))
 export function retryDelayMs(error: unknown, attempt: number): number {
 	const text = String((error as any)?.message ?? error)
 	const m = text.match(/retryDelay"?\s*[:=]\s*"?(\d+(?:\.\d+)?)s/)
-	if (m) return Math.ceil(parseFloat(m[1]) * 1000) + 500
+	// A daily quota can ask for hours; never sleep longer than a minute here.
+	if (m) return Math.min(65_000, Math.ceil(parseFloat(m[1]) * 1000) + 500)
 	return Math.min(60_000, 2_000 * 2 ** attempt)
 }
 
@@ -42,4 +43,9 @@ export function isRetryable(error: unknown): boolean {
 	const text = String((error as any)?.message ?? error)
 	const status = (error as any)?.status ?? (error as any)?.code
 	return [429, 500, 502, 503, 504].includes(Number(status)) || /429|RESOURCE_EXHAUSTED|UNAVAILABLE|overloaded|503|500|fetch failed|ECONNRESET|ETIMEDOUT/i.test(text)
+}
+
+// Free tier daily caps do not come back within a run, so retrying the same model is pointless.
+export function isDailyQuota(error: unknown): boolean {
+	return /PerDay|per day/i.test(String((error as any)?.message ?? error))
 }
