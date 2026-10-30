@@ -30,6 +30,7 @@ const HELP = `Shark Tank for Science: a Mozaik pitch room for EINSTEIN
 Options
   --replay <file>      answer every model call from a recording
   --record <file>      where a live run saves its recording (default recordings/last-run.json)
+  --resume <file>      continue a live run that stopped: reuse its recorded answers, call the model for the rest
   --mock               no model calls at all
   --problem "<text>"   reverse search mode
   --sector <name>      only challenges from companies in this sector
@@ -69,9 +70,14 @@ async function main() {
 		mode = "replay"
 		// A replay reruns the exact room that was recorded.
 		const recorded = parseArgs(recording.args)
-		for (const k of ["replay", "out", "quiet", "speed", "data"]) recorded.delete(k)
+		for (const k of ["replay", "resume", "record", "out", "quiet", "speed", "data"]) recorded.delete(k)
 		for (const k of ["out", "quiet", "speed", "data"]) if (args.has(k)) recorded.set(k, args.get(k)!)
 		args = recorded
+	} else if (typeof args.get("resume") === "string") {
+		// Live run that reuses every answer already in the recording and fills in the rest.
+		recording = loadRecording(args.get("resume") as string)
+		recording.args = argv.filter((a, i) => a !== "--resume" && argv[i - 1] !== "--resume")
+		if (!args.has("record")) args.set("record", args.get("resume") as string)
 	} else {
 		recording = { recordedAt: new Date().toISOString(), model: "", writerModel: "", args: argv, note: "", calls: {} }
 		if (args.has("mock")) mode = "mock"
@@ -88,7 +94,7 @@ async function main() {
 	const str = (k: string, d: string) => (typeof args.get(k) === "string" ? (args.get(k) as string) : d)
 	const num = (k: string, d: number) => (typeof args.get(k) === "string" ? Number(args.get(k)) : d)
 	const model = mode === "replay" ? recording.model : process.env.MODEL || "gemini-3.5-flash-lite"
-	const writerModel = mode === "replay" ? recording.writerModel : process.env.WRITER_MODEL || "gemini-3.5-flash"
+	const writerModel = mode === "replay" ? recording.writerModel : process.env.WRITER_MODEL || "gemini-3.5-flash-lite"
 	const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19)
 	const outDir = str("out", join("runs", `${stamp}-${mode}`))
 	const quiet = args.has("quiet") || (args.get("quiet") === true)
@@ -143,7 +149,7 @@ async function main() {
 		writeFileSync(join(outDir, "proposals", name), renderProposal(ds, c, mode))
 	})
 	writeFileSync(join(outDir, "board.json"), JSON.stringify([...state.board.values()], null, 1))
-	writeFileSync(join(outDir, "summary.md"), renderSummary(state, files, mode === "replay" ? recording.args : argv))
+	writeFileSync(join(outDir, "summary.md"), renderSummary(state, files, mode === "replay" ? ["--replay", String(replayFile)] : argv))
 	writeFileSync(join(outDir, "pitch-room.html"), renderHtml(state, files))
 
 	if (mode === "live") {
