@@ -5,11 +5,14 @@
   "type": "module",
   "private": true,
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "data": "node scripts/fetch-data.mjs",
     "start": "tsx src/main.ts",
     "replay": "tsx src/main.ts --replay recordings/main-run.json",
+    "replay:reverse": "tsx src/main.ts --replay recordings/reverse-run.json",
     "mock": "tsx src/main.ts --mock",
     "reverse": "tsx src/main.ts --problem",
     "test": "node --import tsx --test tests/*.test.ts",

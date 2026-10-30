@@ -97,6 +97,8 @@ npm run reverse -- "We run a mid-sized dairy. Our yoghurt and cheese lines lose 
 
 The text becomes a citable record (`Q-1`), every lens switches to its single problem mode, and the room runs as usual.
 
+A recorded reverse search is in [`runs/recorded/reverse-run/`](runs/recorded/reverse-run/) (`npm run replay:reverse`). A dairy describes losing yoghurt and cheese batches to milk quality swings. Scouts pitched 6 researchers; the sharks killed 4 with dealbreakers (two people committed to other projects until the end of 2026, two whose work is on the farm side or on texture rather than intake prediction) and 2 became proposals. Saying no is part of the answer.
+
 ## How to run
 
 Needs Node 20 or newer.
@@ -110,6 +112,7 @@ npm run data        # downloads the EINSTEIN dataset (32 MB) into data/
 
 ```bash
 npm run replay      # replays the recorded live run, every answer from recordings/main-run.json
+npm run replay:reverse   # replays the recorded reverse search run
 npm run mock        # offline run with small deterministic stand-in answers, marked [MOCK]
 npm test            # 29 tests, including two mock end to end runs on a small fixture
 ```
