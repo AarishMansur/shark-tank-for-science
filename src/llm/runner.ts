@@ -1,8 +1,6 @@
 import {
-	DefaultInferenceRunner,
 	InputTokenDetails,
 	InferenceInput,
-	InferenceInputValidator,
 	InferenceOutput,
 	InferenceRunner,
 	ModelMessageItem,
@@ -30,7 +28,17 @@ export class PitchRoomRunner implements InferenceRunner {
 		private readonly recording: Recording,
 		opts: { maxConcurrent: number; rpm: number; replaySpeed: number },
 	) {
-		this.inner = new DefaultInferenceRunner(supportedModels, new InferenceInputValidator())
+		// Same routing as Mozaik's default runner: pick the endpoint for the model name.
+		this.inner = {
+			run: async (input: InferenceInput) => {
+				const model = supportedModels.find((m) => m.specification.name === input.model)
+				if (!model) throw new Error(`Unsupported model: ${input.model}`)
+				return model.endpoint.infer(input)
+			},
+			stream: async function* () {
+				throw new Error("not used")
+			},
+		}
 		this.throttle = new Throttle(opts.maxConcurrent, opts.rpm)
 		this.replaySpeed = opts.replaySpeed
 	}
@@ -63,32 +71,34 @@ export class PitchRoomRunner implements InferenceRunner {
 		let lastError: unknown
 		for (let attempt = 0; attempt < 7; attempt++) {
 			await this.throttle.acquire()
+			let out: InferenceOutput
 			try {
-				const out = await this.inner.run(input)
-				const text = out.items
-					.filter((i): i is ModelMessageItem => i instanceof ModelMessageItem)
-					.map((i) => i.content.text)
-					.join("")
-				const u = out.tokenUsage
-				const latencyMs = Date.now() - started
-				this.recording.calls[key] = {
-					agent,
-					model: input.model,
-					text,
-					inputTokens: u?.inputTokens ?? 0,
-					outputTokens: u?.outputTokens ?? 0,
-					reasoningTokens: u?.outputTokenDetails?.reasoning_tokens ?? 0,
-					latencyMs,
-				}
-				return this.output(text, u?.inputTokens ?? 0, u?.outputTokens ?? 0, u?.outputTokenDetails?.reasoning_tokens ?? 0, { live: true })
+				out = await this.inner.run(input)
 			} catch (error) {
+				this.throttle.release()
 				lastError = error
 				st.trace.log("model.retry", agent, { key, attempt, error: String((error as any)?.message ?? error).slice(0, 300) })
 				if (!isRetryable(error)) break
 				await sleep(retryDelayMs(error, attempt))
-			} finally {
-				this.throttle.release()
+				continue
 			}
+			this.throttle.release()
+			const text = out.items
+				.filter((i): i is ModelMessageItem => i instanceof ModelMessageItem)
+				.map((i) => i.content.text)
+				.join("")
+			const u = out.tokenUsage
+			const reasoning = u?.outputTokenDetails?.reasoning_tokens ?? 0
+			this.recording.calls[key] = {
+				agent,
+				model: input.model,
+				text,
+				inputTokens: u?.inputTokens ?? 0,
+				outputTokens: u?.outputTokens ?? 0,
+				reasoningTokens: reasoning,
+				latencyMs: Date.now() - started,
+			}
+			return this.output(text, u?.inputTokens ?? 0, u?.outputTokens ?? 0, reasoning, { live: true })
 		}
 		return this.output(JSON.stringify({ __error: String((lastError as any)?.message ?? lastError).slice(0, 300) }), 0, 0, 0, { failed: true })
 	}
