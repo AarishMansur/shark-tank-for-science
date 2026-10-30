@@ -22,5 +22,6 @@ export function toClaims(raw: unknown, by: string, prefix: string): Claim[] {
 }
 
 export function listClaims(claims: Claim[]): string {
-	return claims.map((c) => `- (${c.id}) ${c.text} [${c.sourceIds.join(", ")}]`).join("\n")
+	// No claim labels here: models copied them into their own citations.
+	return claims.map((c) => `- ${c.text} [${c.sourceIds.join(", ")}]`).join("\n")
 }
