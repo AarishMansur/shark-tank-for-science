@@ -3,10 +3,34 @@ import { ask, taskHandlers } from "../llm/ask"
 import { checkClaimRules, idsIn, lexicalSupport, sourceExcerpts } from "../room/citations"
 import { emit, on } from "../room/events"
 import { supportSchema } from "../room/schemas"
+import type { Dataset } from "../data/dataset"
 import type { Claim, PairCard } from "../room/types"
 import { room } from "../runtime"
 
 const NAME = "Critic"
+
+export const CRITIC_INSTRUCTION = `You are the Critic of a pitch room. You check claims against the records they cite and nothing else.
+A claim is supported only if the cited record text states it or directly implies it. Being on the same topic is not enough.
+Unsupported: invented papers, skills, numbers or experience; a record that says something different; a claim that stretches a keyword into expertise; any statement about a person's worth.
+Be strict but fair: paraphrase is fine, and claims about what a company needs are supported by the challenge text.
+How to read the records: a publication, project or patent "linked in the dataset to" a person is theirs (they wrote it or took part). A researcher record's "Industry experience" and "Notes" lines are evidence about that person, and a company record's "R&D capacity" and "Past collaborations" lines are evidence about that company.
+Shark objections often mix a fact with a judgment ("only two developers, so integration is a risk"). Judge the factual part: if the record states the fact, the claim is supported; the judgment is the shark's to make.
+Do not use em dashes.`
+
+// The prompt for the model layer. Shared with the critic eval so it measures exactly this.
+export function checkPrompt(ds: Dataset, keyed: { key: string; claim: Pick<Claim, "by" | "text" | "sourceIds"> }[]): string {
+	const ids = [...new Set(keyed.flatMap((k) => k.claim.sourceIds))]
+	return `Check each claim against the records it cites.
+Code has already verified that every cited record exists and belongs to this researcher or this company, so never reject a claim because a record does not name the person; judge only whether the content supports the claim.
+
+Claims:
+${keyed.map((k) => `- (${k.key}) [by ${k.claim.by}] ${k.claim.text}  cites: ${k.claim.sourceIds.join(", ")}`).join("\n")}
+
+Cited records:
+${sourceExcerpts(ds, ids)}
+
+Return one check per claim id.`
+}
 
 // Two layers. First hard rules in code (the source exists, it belongs to this pair,
 // quotes are verbatim). Then a model reads each surviving claim next to the text of
@@ -15,13 +39,7 @@ export function createCritic(): Agent {
 	const agent: Agent = createAgent({
 		name: NAME,
 		capabilities: ["critic", "fact-check"],
-		instruction: `You are the Critic of a pitch room. You check claims against the records they cite and nothing else.
-A claim is supported only if the cited record text states it or directly implies it. Being on the same topic is not enough.
-Unsupported: invented papers, skills, numbers or experience; a record that says something different; a claim that stretches a keyword into expertise; any statement about a person's worth.
-Be strict but fair: paraphrase is fine, and claims about what a company needs are supported by the challenge text.
-How to read the records: a publication, project or patent "linked in the dataset to" a person is theirs (they wrote it or took part). A researcher record's "Industry experience" and "Notes" lines are evidence about that person, and a company record's "R&D capacity" and "Past collaborations" lines are evidence about that company.
-Shark objections often mix a fact with a judgment ("only two developers, so integration is a risk"). Judge the factual part: if the record states the fact, the claim is supported; the judgment is the shark's to make.
-Do not use em dashes.`,
+		instruction: CRITIC_INSTRUCTION,
 		tools: [],
 		handlers: [
 			...taskHandlers,
@@ -98,20 +116,10 @@ function review(agent: Agent, card: PairCard, claims: Claim[], purpose: string, 
 		return
 	}
 	const keyed = pending.map((c, i) => ({ key: `c${i + 1}`, claim: c }))
-	const ids = [...new Set(pending.flatMap((c) => c.sourceIds))]
 	ask(agent, {
 		purpose,
 		pairId: card.pairId,
-		prompt: `Check each claim against the records it cites.
-Code has already verified that every cited record exists and belongs to this researcher or this company, so never reject a claim because a record does not name the person; judge only whether the content supports the claim.
-
-Claims:
-${keyed.map((k) => `- (${k.key}) [by ${k.claim.by}] ${k.claim.text}  cites: ${k.claim.sourceIds.join(", ")}`).join("\n")}
-
-Cited records:
-${sourceExcerpts(st.dataset, ids)}
-
-Return one check per claim id.`,
+		prompt: checkPrompt(st.dataset, keyed),
 		schema: supportSchema,
 		mock: () => ({
 			checks: keyed.map((k) => {
