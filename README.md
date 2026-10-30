@@ -79,6 +79,24 @@ Two layers, both logged as `critic.kill` with the layer that fired:
 
 A pitch is cleared only if at least two claims survive and at least half of them do. Otherwise it goes back to its scout with the reasons, once. Killed shark objections do not count towards the decision. Claims killed in a proposal are stripped and listed at the bottom of the proposal file, so a reviewer sees what was removed and why.
 
+### Measuring the critic
+
+`npm run eval:critic` plants 22 false claims and mixes them with 16 hand labelled true ones ([`eval/critic-cases.json`](eval/critic-cases.json)), then runs both layers on them with the exact prompt the room uses. The false claims cover a paper by a different researcher, a paper by another researcher with the same name (the dataset has two Nina Mamužić and two Vladan Dobanovački), record ids that do not exist, a missing source, an invented quote, altered numbers (employees, farms, stations, MAPE target, substations, soil types) and wrong company or researcher facts (city, founding year, markets, crops, cloud provider, rank, patent subject, funder).
+
+Real numbers from gemini-3.5-flash-lite, 3 runs ([`eval/critic-results.md`](eval/critic-results.md)):
+
+| | Caught | False kills |
+| --- | --- | --- |
+| Rules + model, run 1 | 22/22 | 0/16 |
+| Rules + model, run 2 | 22/22 | 0/16 |
+| Rules + model, run 3 | 22/22 | 1/16 |
+| Rules only, no model | 8/22 | 0/16 |
+| Rules + the lexical stand-in used by `--mock` | 10/22 | 0/16 |
+
+The rules alone catch every wrong-owner, same-name, missing-id and fake-quote claim. Everything about numbers and facts needs the model. The one false kill rejected "GridSense Analytics has 31 employees and is based at NTP Novi Sad" with a reason about a founding city the claim never mentioned, which is the kind of over-strictness to expect from a small model. Model answers are saved in `eval/critic-answers.json`, so the eval reruns without a key; with a key and a new model or prompt it calls Gemini again (4 calls per run).
+
+This set is small and hand written, so it is easier than real pitches. In the recorded main run the critic made real false kills: before record excerpts were raised to 4,000 characters, it could not see a line late in a long company record (see "What doesn't work yet"). The longest record in the dataset is 3,668 characters, so the critic now always sees whole records.
+
 ### The decision rule (Chair, deterministic, unit tested)
 
 - A dealbreaker objection that survived the critic kills the pair.
