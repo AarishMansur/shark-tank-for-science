@@ -13,8 +13,8 @@ The University of Novi Sad has over a thousand researchers and NTP Novi Sad has 
 Every step, every model call and every kill goes into a JSONL trace, and a self-contained HTML page plays the run back.
 
 ## Demo
+https://youtu.be/dMqInl7sK08https://youtu.be/dMqInl7sK08
 
-<!-- Video, screenshots or a link go here. -->
 
 ## Results from the recorded run
 
