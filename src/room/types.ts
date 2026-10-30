@@ -41,6 +41,7 @@ export type PairStatus =
 	| "survived"
 	| "wildcard"
 	| "killed"
+	| "review"
 	| "writing"
 	| "proposed"
 
@@ -72,4 +73,5 @@ export type PairCard = {
 	removedProposalClaims: Claim[]
 	pitchedAt: number
 	wildcard?: boolean
+	human?: { approved: boolean; note: string }
 }

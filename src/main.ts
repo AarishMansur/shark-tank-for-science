@@ -40,6 +40,7 @@ Options
   --rpm <n>            model calls per minute across the room (default 12)
   --concurrency <n>    model calls in flight at once (default 4)
   --speed <x>          replay speed factor, 0 for instant (default 0.25)
+  --approve            ask a human (on the terminal) to approve each surviving pair before a proposal is written
   --quiet              no live log
 `
 
@@ -111,6 +112,7 @@ async function main() {
 		minProposals: num("min-proposals", 3),
 		outDir,
 		quiet,
+		approve: args.has("approve"),
 		rpm: num("rpm", 12),
 		maxConcurrent: num("concurrency", 4),
 		replaySpeed: num("speed", 0.25),

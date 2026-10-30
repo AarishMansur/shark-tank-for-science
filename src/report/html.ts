@@ -18,6 +18,7 @@ export function renderHtml(st: PitchRoomState, files: Map<string, string>): stri
 		verdicts: Object.values(c.verdicts).map((v) => ({ shark: v.shark, verdict: v.verdict, confidence: v.confidence, question: v.question })),
 		file: files.get(c.pairId) ?? null,
 		wildcard: !!c.wildcard,
+		human: c.human ?? null,
 	}))
 	const lanes: Record<string, { start: number; end: number; task: string }[]> = {}
 	const open = new Map<string, { agent: string; start: number; task: string }>()
@@ -78,6 +79,7 @@ section{padding:12px 22px}h2{font-size:14px;color:var(--mut);text-transform:uppe
 .col{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;min-height:120px}
 .col h3{margin:0 0 8px;font-size:12px;color:var(--mut);display:flex;justify-content:space-between}
 .card{border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:6px;padding:7px 8px;margin-bottom:7px;background:#0d1117;font-size:12px;cursor:pointer;transition:all .3s}
+.ha{color:var(--ok);font-weight:600}.hr{color:var(--bad);font-weight:600}.hw{color:var(--warn)}.card.review{border-left-color:var(--warn)}
 .card.killed{border-left-color:var(--bad);opacity:.75}.card.proposed{border-left-color:var(--ok)}.card.writing,.card.survived{border-left-color:var(--wr)}.card.cleared,.card.grilled{border-left-color:var(--warn)}
 .card .t{font-weight:600;margin-bottom:3px}.card .m{color:var(--mut)}.flash{animation:fl 1s}@keyframes fl{0%{background:#4b1b1b}100%{background:#0d1117}}
 #feed{max-height:300px;overflow:auto;font:12px/1.5 ui-monospace,Menlo,monospace;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px}
@@ -95,7 +97,7 @@ a{color:var(--acc)}
 <section><h2>Tokens per agent</h2><table id="usage"></table></section>
 <script>
 const D=__DATA__;
-const COLS=[["pitched","Pitched",["pitched","returned"]],["critic","Cleared by critic",["cleared"]],["grill","Grilled",["grilled"]],["writing","Survived, writing",["survived","writing","wildcard"]],["proposed","Proposal",["proposed"]],["killed","Killed",["killed"]]];
+const COLS=[["pitched","Pitched",["pitched","returned"]],["critic","Cleared by critic",["cleared"]],["grill","Grilled",["grilled"]],["writing","Survived, writing",["survived","review","writing","wildcard"]],["proposed","Proposal",["proposed"]],["killed","Killed",["killed"]]];
 const t=document.getElementById("t");t.max=D.total;const fmt=ms=>(ms/1000).toFixed(1)+" s";
 document.getElementById("mode").textContent=D.mode+" mode, "+D.model+(D.problem?" | reverse search":"");
 document.getElementById("stats").textContent=D.cards.length+" pairs, "+D.cards.filter(c=>c.file).length+" proposals, "+D.kills.length+" claims killed";
@@ -109,6 +111,7 @@ const feed=document.getElementById("feed");
 for(const f of D.feed){const d=document.createElement("div");d.dataset.ms=f.ms;d.className=f.type==="critic.kill"?"k":f.type==="shark.verdict"?"s":"";d.textContent="["+fmt(f.ms)+"] "+f.agent+(f.pair?" @ "+f.pair:"")+": "+f.text;feed.appendChild(d)}
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let last={};
+function humanAt(c,ms){return c.history.some(h=>h.at<=ms&&/by a human/.test(h.note))}
 function statusAt(c,ms){let s=null;for(const h of c.history){if(h.at<=ms)s=h.status}return s}
 function render(ms){document.getElementById("clock").textContent=fmt(ms)+" / "+fmt(D.total);
 document.querySelectorAll(".playhead").forEach(c=>c.style.left=(ms/D.total*100)+"%");
@@ -117,7 +120,7 @@ for(const [k] of COLS){colEls[k].querySelectorAll(".card").forEach(e=>e.remove()
 const counts={};
 for(const c of D.cards){const s=statusAt(c,ms);if(!s)continue;const col=COLS.find(x=>x[2].includes(s));if(!col)continue;counts[col[0]]=(counts[col[0]]||0)+1;
 const e=document.createElement("div");e.className="card "+s+(last[c.id]&&last[c.id]!==s&&s==="killed"?" flash":"");
-e.innerHTML="<div class=t>"+esc(c.researcher)+"</div><div>x "+esc(c.company)+"</div><div class=m>"+esc(c.scout)+(c.seconded.length?" +"+c.seconded.length:"")+(c.wildcard?" | wildcard":"")+"</div>";
+e.innerHTML="<div class=t>"+esc(c.researcher)+"</div><div>x "+esc(c.company)+"</div><div class=m>"+esc(c.scout)+(c.seconded.length?" +"+c.seconded.length:"")+(c.wildcard?" | wildcard":"")+(c.human&&statusAt(c,ms)!=="review"&&humanAt(c,ms)?(c.human.approved?" | <span class=ha>human: yes</span>":" | <span class=hr>human: no</span>"):"")+(s==="review"?" | <span class=hw>waiting for a human</span>":"")+"</div>";
 e.onclick=()=>detail(c);colEls[col[0]].appendChild(e);last[c.id]=s}
 for(const [k] of COLS)colEls[k].querySelector(".n").textContent=counts[k]||0;
 feed.querySelectorAll("div").forEach(d=>d.classList.toggle("on",+d.dataset.ms<=ms))}

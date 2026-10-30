@@ -12,6 +12,7 @@ export type RoomEvents = {
 	"verdicts.checked": { pairId: string }
 	"pair.killed": { pairId: string; by: string; reason: string }
 	"pair.survived": { pairId: string; wildcard?: boolean }
+	"pair.approved": { pairId: string; note: string }
 	"proposal.drafted": { pairId: string; version: number }
 	"proposal.returned": { pairId: string; version: number; kills: { claim: string; reason: string }[] }
 	"proposal.final": { pairId: string }

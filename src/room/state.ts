@@ -13,6 +13,7 @@ export type RunConfig = {
 	minProposals: number
 	outDir: string
 	quiet: boolean
+	approve: boolean // a human approves each surviving pair before the Writer starts
 }
 
 export type Task = {

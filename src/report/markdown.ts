@@ -27,7 +27,7 @@ ${mode !== "live" && mode !== "replay" ? "> Generated in mock mode: structure on
 **Challenge:** [${ref.challenge.id}] ${ref.challenge.text}
 **Researcher:** ${r.name} [${r.id}], ${r.title}, ${r.department}, ${ds.faculty.get(r.id)}
 **Found by:** ${card.pitch.scout} (lens: ${card.pitch.lens})${card.pitch.secondedBy.length ? `, seconded by ${card.pitch.secondedBy.join(", ")}` : ""}
-**Room verdict:** ${verdicts.map((v) => `${v.shark} ${v.verdict} ${v.confidence}/10`).join(", ")}
+**Room verdict:** ${verdicts.map((v) => `${v.shark} ${v.verdict} ${v.confidence}/10`).join(", ")}${card.human ? `\n**Human approval:** approved${card.human.note ? ` (${card.human.note})` : ""}` : ""}
 ${flags.length ? `**Availability caveats from the profile:** ${flags.join("; ")}\n` : ""}
 ${p.summary}
 

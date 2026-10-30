@@ -18,6 +18,7 @@ export type Recording = {
 	args: string[]
 	note: string
 	calls: Record<string, RecordedCall>
+	humanDecisions?: Record<string, { approved: boolean; note: string }>
 }
 
 export function loadRecording(file: string): Recording {

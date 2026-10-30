@@ -84,6 +84,10 @@ export function createChair(): Human {
 			}),
 			on("pair.survived", ({ pairId }) => {
 				const card = room().board.get(pairId)
+				if (card && !room().config.approve) room().setStatus(card, "writing", "writer drafting", NAME)
+			}),
+			on("pair.approved", ({ pairId }) => {
+				const card = room().board.get(pairId)
 				if (card) room().setStatus(card, "writing", "writer drafting", NAME)
 			}),
 			on("scout.done", ({ scout }) => {
@@ -109,7 +113,7 @@ function settle(chairId: string): void {
 		// Fewer proposals than the brief asks for: promote the strongest split decisions,
 		// labelled as wildcards. Never pairs the critic killed or that hold a dealbreaker.
 		const wild = cards
-			.filter((c) => c.status === "killed" && Object.keys(c.verdicts).length === 2 && !/dealbreaker|critic|withdrew|error|both sharks pass/i.test(`${c.killedBy} ${c.killReason}`))
+			.filter((c) => c.status === "killed" && Object.keys(c.verdicts).length === 2 && !/dealbreaker|critic|human|withdrew|error|both sharks pass/i.test(`${c.killedBy} ${c.killReason}`))
 			.sort((a, b) => pairScore(b) - pairScore(a) || a.pairId.localeCompare(b.pairId))
 			.slice(0, st.config.minProposals - proposed)
 		if (wild.length) {

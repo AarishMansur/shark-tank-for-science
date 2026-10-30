@@ -2,6 +2,7 @@ import { Dataset } from "../data/dataset"
 import { createChair } from "../agents/chair"
 import { createCritic } from "../agents/critic"
 import { createRecorder } from "../agents/recorder"
+import { createReviewer } from "../agents/reviewer"
 import { createScout } from "../agents/scout"
 import { SHARKS, createShark } from "../agents/shark"
 import { createWriter } from "../agents/writer"
@@ -51,6 +52,7 @@ export async function runRoom(ds: Dataset, opts: RunOptions, recording: Recordin
 	join(chair)
 	join(createCritic())
 	for (const s of SHARKS) join(createShark(s))
+	if (opts.approve) join(createReviewer(recording))
 	join(createWriter())
 	for (const lens of LENSES) join(createScout(lens))
 

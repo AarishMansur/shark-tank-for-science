@@ -24,7 +24,10 @@ ${HOUSE_RULES}`,
 		tools: [],
 		handlers: [
 			...taskHandlers,
-			on("pair.survived", ({ pairId }) => write(agent, pairId, 1, [])),
+			on("pair.survived", ({ pairId }) => {
+				if (!room().config.approve) write(agent, pairId, 1, [])
+			}),
+			on("pair.approved", ({ pairId }) => write(agent, pairId, 1, [])),
 			on("proposal.returned", ({ pairId, version, kills }) => write(agent, pairId, version + 1, kills)),
 		],
 	})

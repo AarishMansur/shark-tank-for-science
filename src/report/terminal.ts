@@ -27,8 +27,11 @@ export function printLine(l: TraceLine, ds: Dataset): void {
 			if (d.status === "killed") return console.log(`${t} ${who(l.agent)} ${red("OUT")} ${pair}: ${d.note}`)
 			if (d.status === "survived" || d.status === "wildcard") return console.log(`${t} ${who(l.agent)} ${green(d.status.toUpperCase())} ${pair}: ${d.note}`)
 			if (d.status === "proposed") return console.log(`${t} ${who(l.agent)} ${magenta("PROPOSAL")} ${pair}: ${d.note}`)
+			if (d.status === "review") return console.log(`${t} ${who(l.agent)} ${yellow("REVIEW")} ${pair}: ${d.note}`)
 			if (d.status === "returned") return console.log(`${t} ${who(l.agent)} ${yellow("RETURNED")} ${pair}: ${d.note}`)
 			return
+		case "human.decision":
+			return console.log(`${t} ${who(l.agent)} ${d.approved ? green("APPROVED") : red("REJECTED")} ${pair}${d.note ? `: ${d.note}` : ""}`)
 		case "model.retry":
 			return console.log(`${t} ${who(l.agent)} ${dim(`retry ${d.attempt + 1}: ${String(d.error).slice(0, 80)}`)}`)
 		case "agent.crash":
