@@ -1,0 +1,3133 @@
+[
+ {
+  "pairId": "R0671xC151-CH3",
+  "pitch": {
+   "pairId": "R0671xC151-CH3",
+   "researcherId": "R0671",
+   "challengeId": "C151-CH3",
+   "companyId": "C151",
+   "scout": "Problem Hunter",
+   "lens": "problems",
+   "headline": "Emilija Ostojić and KreditNova d.o.o. will separate macroeconomic default drivers from borrower behaviour in retail lending portfolios.",
+   "why": "KreditNova d.o.o. needs to quantify how much default risk stems from macro conditions versus borrower behaviour using three years of repayment data [C151-CH3, C151]. Emilija Ostojić is an expert in financial econometrics and credit default risk who works on separating macro and micro default drivers using monthly administrative data [R0671, SYN-PUB-07582].",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "KreditNova d.o.o. operates in Novi Sad as a fintech company focusing on alternative lending and credit scoring.",
+     "sourceIds": [
+      "C151"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "KreditNova d.o.o. struggles to separate how much default risk is explained by macroeconomic conditions versus individual borrower behaviour across roughly 41,000 closed loans.",
+     "sourceIds": [
+      "C151-CH3"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Emilija Ostojić is an Assistant Professor at the Faculty of Economics in Subotica specializing in financial econometrics and credit default risk.",
+     "sourceIds": [
+      "R0671"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Emilija Ostojić published research on separating macro and micro default drivers in retail lending using a latent factor approach.",
+     "sourceIds": [
+      "SYN-PUB-07582"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": [
+    "Fresh Ink"
+   ]
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6577,
+    "status": "pitched",
+    "note": "pitched by Problem Hunter"
+   },
+   {
+    "at": 8399,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 67784,
+    "status": "grilled",
+    "note": "CTO Shark invest 9/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 67784,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 67784,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 164165,
+    "status": "proposed",
+    "note": "proposal ready: Separating Macro and Micro Default Drivers in Retail Lending Portfolios"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Emilija Ostojić is an Assistant Professor at the Faculty of Economics in Subotica specializing in financial econometrics and credit default risk. [R0671]",
+      "sourceIds": [
+       "R0671"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Emilija Ostojić published research on separating macro and micro default drivers in retail lending using a latent factor approach. [SYN-PUB-07582]",
+      "sourceIds": [
+       "SYN-PUB-07582"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "KreditNova d.o.o. operates in Novi Sad as a fintech company focusing on alternative lending and credit scoring. [C151]",
+      "sourceIds": [
+       "C151"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "KreditNova d.o.o. struggles to separate how much default risk is explained by macroeconomic conditions versus individual borrower behaviour across roughly 41,000 closed loans. [C151-CH3]",
+      "sourceIds": [
+       "C151-CH3"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "The company has limited R&D capacity and can only dedicate one senior data engineer and the head of risk to this project. [C151]",
+      "sourceIds": [
+       "C151"
+      ],
+      "by": "CTO Shark",
+      "status": "killed",
+      "severity": "concern",
+      "killReason": "C151 states the company has 34 people and does not state it has limited R&D capacity or can only dedicate one senior data engineer and the head of risk.",
+      "killedBy": "critic"
+     }
+    ],
+    "question": "How quickly can Emilija integrate her latent factor methodology into our existing PostgreSQL and Python pipeline so we can pass the National Bank of Serbia regulatory submission without slowing down our core feature engineering?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Emilija Ostojić holds a PhD in quantitative finance and serves as an Assistant Professor at the Faculty of Economics in Subotica.",
+      "sourceIds": [
+       "R0671"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Emilija Ostojić published research directly focused on separating macro and micro default drivers in retail lending using a latent factor approach.",
+      "sourceIds": [
+       "SYN-PUB-07582"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "KreditNova d.o.o. operates in Novi Sad and has compiled three years of repayment data covering roughly 41,000 closed loans.",
+      "sourceIds": [
+       "C151",
+       "C151-CH3"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "KreditNova d.o.o. relies on Python and machine learning pipelines, whereas the researcher's background is deeply rooted in traditional panel econometrics and latent factor models, which might create an integration friction.",
+      "sourceIds": [
+       "R0671",
+       "C151"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "How will you bridge the gap between KreditNova's operational Python and XGBoost scoring environment and your latent factor econometric framework to satisfy the National Bank of Serbia regulatory submission?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6576,
+  "proposal": {
+   "title": "Separating Macro and Micro Default Drivers in Retail Lending Portfolios",
+   "kind": "joint_project",
+   "summary": "KreditNova d.o.o. and Assistant Professor Emilija Ostojić will partner to separate macroeconomic default drivers from individual borrower behaviour across approximately 41,000 closed loans. The project will bridge traditional panel econometrics with a Python and XGBoost scoring pipeline to meet National Bank of Serbia regulatory requirements. This collaboration yields a robust risk decomposition framework that neither partner could build alone.",
+   "problem": "KreditNova d.o.o. has accumulated three years of repayment data covering roughly 41,000 closed loans but cannot quantify how much default risk stems from macroeconomic conditions versus individual borrower behaviour. The National Bank of Serbia requires the company to separate systematic risk from idiosyncratic borrower risk in its next supervisory submission, a task for which the internal risk team lacks a formal two-component econometric model.",
+   "researchQuestions": [
+    "How can a latent factor econometric framework be integrated into KreditNova's PostgreSQL and Python feature pipeline without disrupting existing credit scoring workflows?",
+    "What proportion of cross-sectional default variation across the 41,000 closed loans is driven by systematic macroeconomic shocks versus individual borrower characteristics?",
+    "How can the hybrid credit scoring model satisfy National Bank of Serbia regulatory requirements for macroeconomic sensitivity testing?"
+   ],
+   "plan": [
+    {
+     "phase": "Phase 1",
+     "work": "Analyze the 41,000 closed loan dataset and specify the latent factor model to decompose historical default rates into macro-financial and borrower-specific components.",
+     "result": "A validated econometric specification for risk decomposition tailored to alternative retail lending data."
+    },
+    {
+     "phase": "Phase 2",
+     "work": "Translate the econometric latent factor methodology into modular Python code compatible with KreditNova's existing PostgreSQL database and machine learning pipeline.",
+     "result": "An operational pipeline module that computes macroeconomic sensitivity metrics alongside existing XGBoost scores."
+    },
+    {
+     "phase": "Phase 3",
+     "work": "Calibrate and test the integrated scoring framework against historical portfolio data and structure the documentation required for the National Bank of Serbia regulatory submission.",
+     "result": "A fully tested risk decomposition reporting tool and regulatory submission package."
+    }
+   ],
+   "companyBrings": [
+    "Three years of repayment data covering roughly 41,000 closed retail loans with full event histories.",
+    "A senior data engineer and head of risk dedicated as working counterparts.",
+    "A Python-based machine learning scoring infrastructure and PostgreSQL database environment."
+   ],
+   "facultyBrings": [
+    "Expertise in financial econometrics, panel data regression, and credit default risk modeling.",
+    "Proven latent factor methodologies for separating macro and micro default drivers.",
+    "Extensive academic and applied experience in banking stress testing and regulatory data requirements."
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "KreditNova d.o.o. operates in Novi Sad as a fintech company focusing on alternative lending and credit scoring.",
+     "sourceIds": [
+      "C151"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "KreditNova d.o.o. struggles to separate how much default risk is explained by macroeconomic conditions versus individual borrower behaviour across roughly 41,000 closed loans.",
+     "sourceIds": [
+      "C151-CH3"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Emilija Ostojić is an Assistant Professor at the Faculty of Economics in Subotica specializing in financial econometrics and credit default risk.",
+     "sourceIds": [
+      "R0671"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Emilija Ostojić published research on separating macro and micro default drivers in retail lending using a latent factor approach.",
+     "sourceIds": [
+      "SYN-PUB-07582"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "KreditNova d.o.o. relies on Python and machine learning pipelines, whereas the researcher's background is deeply rooted in traditional panel econometrics and latent factor models, which might create an integration friction.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "The team will bridge this gap during Phase 2 by translating the econometric specifications into modular Python code that wraps cleanly around the existing PostgreSQL and scikit-learn infrastructure without altering core feature engineering."
+    }
+   ],
+   "agreedUpFront": [
+    "All loan-level data will be accessed under a strict non-disclosure agreement protecting borrower anonymity.",
+    "Background intellectual property remains with each respective party, while jointly developed pipeline modules will be licensed for commercial deployment at KreditNova."
+   ],
+   "firstMeetingAgenda": [
+    "Review data access protocols and finalise the non-disclosure agreement parameters.",
+    "Inspect the schema of the PostgreSQL closed loan tables and verify variable availability.",
+    "Establish a weekly project sprint schedule and assign engineering counterparts."
+   ]
+  }
+ },
+ {
+  "pairId": "R0473xC029-CH3",
+  "pitch": {
+   "pairId": "R0473xC029-CH3",
+   "researcherId": "R0473",
+   "challengeId": "C029-CH3",
+   "companyId": "C029",
+   "scout": "Problem Hunter",
+   "lens": "problems",
+   "headline": "Aleksandar Ristić and EkoGradnja Sistem a.d. will build a life-cycle assessment inventory for environmental product declarations.",
+   "why": "EkoGradnja Sistem a.d. wants to prepare an environmental product declaration for their building panels to enter the German market but needs guidance on structuring the inventory and impact categories [C029-CH3, C029]. Aleksandar Ristić specializes in life-cycle assessment, environmental product declarations, and construction materials science [R0473].",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "EkoGradnja Sistem a.d. is based in Novi Sad and manufactures sustainable construction materials and prefabricated building systems.",
+     "sourceIds": [
+      "C029"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "EkoGradnja Sistem a.d. has production data but lacks the expertise to structure the inventory or categories for a full life-cycle assessment to claim an Environmental Product Declaration.",
+     "sourceIds": [
+      "C029-CH3"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Aleksandar Ristić is an Assistant Professor at the Faculty of Technical Sciences in Novi Sad focusing on environmental engineering and life-cycle assessment.",
+     "sourceIds": [
+      "R0473"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Aleksandar Ristić has provided consulting support to precast concrete and brick manufacturers in Vojvodina for third-party verification and EPD preparation.",
+     "sourceIds": [
+      "R0473"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6578,
+    "status": "pitched",
+    "note": "pitched by Problem Hunter"
+   },
+   {
+    "at": 14359,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 72715,
+    "status": "grilled",
+    "note": "CTO Shark invest 9/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 72715,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 72715,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 170256,
+    "status": "proposed",
+    "note": "proposal ready: Industrial PhD Proposal: Life-Cycle Assessment Inventory and EN 15804 Compliance for Prefabricated Building Panels"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "EkoGradnja Sistem a.d. is based in Novi Sad and manufactures sustainable construction materials and prefabricated building systems.",
+      "sourceIds": [
+       "C029"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "EkoGradnja Sistem a.d. has production data but lacks the expertise to structure the inventory or categories for a full life-cycle assessment to claim an Environmental Product Declaration.",
+      "sourceIds": [
+       "C029-CH3"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Aleksandar Ristić is an Assistant Professor at the Faculty of Technical Sciences in Novi Sad focusing on environmental engineering and life-cycle assessment.",
+      "sourceIds": [
+       "R0473"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "Aleksandar Ristić has provided consulting support to precast concrete and brick manufacturers in Vojvodina for third-party verification and EPD preparation.",
+      "sourceIds": [
+       "R0473"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs5",
+      "text": "Aleksandar Ristić has published relevant work on the cradle-to-gate environmental profile of construction materials and holds experience with EN 15804 compliance.",
+      "sourceIds": [
+       "R0473",
+       "SYN-PUB-05595"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "EkoGradnja Sistem a.d. lacks internal R&D staff and data-analysis capacity beyond basic spreadsheet work, which means Ristić will have to drive the heavy lifting of inventory structuring.",
+      "sourceIds": [
+       "C029"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "What is the exact timeline and milestone schedule for delivering the verified EPD to meet the German client requirements within the next twelve months?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "EkoGradnja Sistem a.d. is based in Novi Sad and manufactures sustainable construction materials and prefabricated building systems.",
+      "sourceIds": [
+       "C029"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "EkoGradnja Sistem a.d. has production data but lacks the expertise to structure the inventory or categories for a full life-cycle assessment to claim an Environmental Product Declaration.",
+      "sourceIds": [
+       "C029-CH3"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Aleksandar Ristić is an Assistant Professor at the Faculty of Technical Sciences in Novi Sad focusing on environmental engineering and life-cycle assessment.",
+      "sourceIds": [
+       "R0473"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "Aleksandar Ristić has provided consulting support to precast concrete and brick manufacturers in Vojvodina for third-party verification and EPD preparation.",
+      "sourceIds": [
+       "R0473"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "The company has production data and needs an EPD for export, which risks sliding into standard contract consulting rather than deep, publishable doctoral research.",
+      "sourceIds": [
+       "C029-CH3",
+       "R0473"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Aleksandar, how do we formulate the inventory structuring and regional background database adaptations for these specific prefabricated panels into a rigorous doctoral thesis topic under EN 15804, rather than treating this simply as a commercial EPD consulting assignment?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6578,
+  "proposal": {
+   "title": "Industrial PhD Proposal: Life-Cycle Assessment Inventory and EN 15804 Compliance for Prefabricated Building Panels",
+   "kind": "industrial_phd",
+   "summary": "EkoGradnja Sistem a.d. needs a verified Environmental Product Declaration for export to the German market but lacks internal inventory structuring capacity. Aleksandar Ristić will supervise an industrial PhD researcher to build a rigorous life-cycle assessment methodology under EN 15804 standards. This collaboration transforms a commercial export hurdle into a foundational doctoral thesis while unlocking European market access for prefabricated panels.",
+   "problem": "EkoGradnja Sistem a.d. wants to prepare an environmental product declaration for their building panels to enter the German market but needs guidance on structuring the inventory and impact categories. The company has production data but lacks the expertise to structure the inventory or categories for a full life-cycle assessment to claim an Environmental Product Declaration.",
+   "researchQuestions": [
+    "How can primary production data from wet-cast concrete panel manufacturing be systematically converted into a life-cycle inventory compliant with EN 15804 standards?",
+    "What is the sensitivity of global warming potential and modules A1-A3 impact categories to regional background database adaptations for Serbian raw material inputs?",
+    "How can an automated data-collection framework be established between ERP-based batch tracking and LCA software to streamline future EPD renewals?"
+   ],
+   "plan": [
+    {
+     "phase": "Year 1",
+     "work": "Conduct a comprehensive audit of EkoGradnja Sistem production lines, map unit processes from raw material extraction to factory gate (Modules A1-A3), and establish the baseline life-cycle inventory using primary data.",
+     "result": "A validated life-cycle inventory model and data collection protocol tailored to EkoGradnja Sistem panel manufacturing."
+    },
+    {
+     "phase": "Year 2",
+     "work": "Perform sensitivity analysis on regional background datasets, integrate local electricity and material inputs, and calculate EN 15804 impact categories focusing on global warming potential.",
+     "result": "A draft life-cycle assessment report and a methodology paper ready for peer-reviewed publication."
+    },
+    {
+     "phase": "Year 3",
+     "work": "Prepare the formal Environmental Product Declaration documentation, complete third-party independent verification, and establish an automated internal workflow for ongoing product declarations.",
+     "result": "A registered and third-party verified Environmental Product Declaration enabling German market entry and the completed doctoral dissertation."
+    }
+   ],
+   "companyBrings": [
+    "Access to primary manufacturing lines, electricity meters, raw material purchase records, and transport data for prefabricated panels",
+    "In-house testing laboratory and technical support from two materials technicians and a senior engineer",
+    "Co-funding for the industrial PhD candidate and commercial guidance on target export requirements in Germany"
+   ],
+   "facultyBrings": [
+    "Expertise in life-cycle assessment, environmental engineering, and EN 15804 compliance from the Faculty of Technical Sciences",
+    "Academic supervision and methodological rigour for the doctoral research programme",
+    "Access to advanced software infrastructure and established networks with independent EPD verifiers"
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "EkoGradnja Sistem a.d. is based in Novi Sad and manufactures sustainable construction materials and prefabricated building systems.",
+     "sourceIds": [
+      "C029"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "EkoGradnja Sistem a.d. has production data but lacks the expertise to structure the inventory or categories for a full life-cycle assessment to claim an Environmental Product Declaration.",
+     "sourceIds": [
+      "C029-CH3"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Aleksandar Ristić is an Assistant Professor at the Faculty of Technical Sciences in Novi Sad focusing on environmental engineering and life-cycle assessment.",
+     "sourceIds": [
+      "R0473"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Aleksandar Ristić has provided consulting support to precast concrete and brick manufacturers in Vojvodina for third-party verification and EPD preparation.",
+     "sourceIds": [
+      "R0473"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "EkoGradnja Sistem a.d. lacks internal R&D staff and data-analysis capacity beyond basic spreadsheet work, which means Ristić will have to drive the heavy lifting of inventory structuring.",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The industrial PhD researcher will be embedded directly within the company to manage data collection and inventory structuring, bridging the gap between academic methodology and internal spreadsheet capabilities."
+    },
+    {
+     "objection": "The company has production data and needs an EPD for export, which risks sliding into standard contract consulting rather than deep, publishable doctoral research.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "The research questions explicitly focus on regional background database adaptations and automated LCI data frameworks, ensuring the work generates novel scientific contributions beyond a standard commercial consultancy report."
+    }
+   ],
+   "agreedUpFront": [
+    "Foreground inventory data collected during the project remains the proprietary asset of EkoGradnja Sistem a.d.",
+    "Methodological findings and generalisable LCI modeling approaches may be published in academic journals and the doctoral dissertation",
+    "Independent third-party verification costs and programme operator fees are budgeted separately from research funding"
+   ],
+   "firstMeetingAgenda": [
+    "Review available ERP production batch tracking data and metering structures across manufacturing lines",
+    "Define the exact product category rules and EN 15804 standard requirements for the target German market",
+    "Agree on the industrial PhD recruitment timeline and the dual milestones for commercial EPD delivery and academic research"
+   ]
+  }
+ },
+ {
+  "pairId": "R0269xC144-CH2",
+  "pitch": {
+   "pairId": "R0269xC144-CH2",
+   "researcherId": "R0269",
+   "challengeId": "C144-CH2",
+   "companyId": "C144",
+   "scout": "Problem Hunter",
+   "lens": "problems",
+   "headline": "Ivona Bogdanović and Ferment-Pro d.o.o. will optimize ultrafiltration cleaning protocols to eliminate rapid membrane fouling.",
+   "why": "Ferment-Pro d.o.o. suffers from severe membrane fouling during ultrafiltration of fermentation broths, which cuts throughput and forces frequent cleaning cycles [C144-CH2, C144]. Ivona Bogdanović is a chemical engineering professor specializing in membrane science, ultrafiltration, and fouling characterisation [R0269].",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Ferment-Pro d.o.o. is a biotech company located in Zrenjanin.",
+     "sourceIds": [
+      "C144"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Ferment-Pro d.o.o. experiences low nominal throughput during downstream ultrafiltration because membranes foul with residual biomass within 36 hours.",
+     "sourceIds": [
+      "C144-CH2"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Ivona Bogdanović is a Full Professor at the Department of Chemical Engineering, Faculty of Technology.",
+     "sourceIds": [
+      "R0269"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Ivona Bogdanović has conducted contract research for regional dairy processors on cleaning-in-place protocol optimisation for installed ultrafiltration lines.",
+     "sourceIds": [
+      "R0269"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    },
+    {
+     "id": "c5",
+     "text": "Ivona Bogdanović published research on enzymatic pre-treatment with protease to reduce membrane fouling during ultrafiltration of fermentation broths.",
+     "sourceIds": [
+      "SYN-PUB-03380"
+     ],
+     "by": "Problem Hunter",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6578,
+    "status": "pitched",
+    "note": "pitched by Problem Hunter"
+   },
+   {
+    "at": 19663,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 76078,
+    "status": "grilled",
+    "note": "CTO Shark pass 8/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 76078,
+    "status": "survived",
+    "note": "split decision carried by Professor Shark at 9/10 (CTO Shark passed without a supported dealbreaker)"
+   },
+   {
+    "at": 76078,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 216702,
+    "status": "proposed",
+    "note": "proposal ready: Industrial PhD Proposal: Mitigation of Biomass Fouling in Spiral-Wound Ultrafiltration Membranes for Bioprocess Streams"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "pass",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Ferment-Pro d.o.o. is a biotech company located in Zrenjanin with 58 employees operating since 1997 [C144].",
+      "sourceIds": [
+       "C144"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Ivona Bogdanović is a Full Professor at the Department of Chemical Engineering, Faculty of Technology [R0269].",
+      "sourceIds": [
+       "R0269"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Ivona Bogdanović has published research on enzymatic pre-treatment with protease to reduce membrane fouling during ultrafiltration of fermentation broths [SYN-PUB-03380].",
+      "sourceIds": [
+       "SYN-PUB-03380"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "Ferment-Pro experiences membrane fouling within 36 hours during ultrafiltration, adding 11% to total production cost [C144-CH2].",
+      "sourceIds": [
+       "C144-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Ferment-Pro has only one process development technologist, Ana Vuković, who splits her time between production troubleshooting and 5-litre bench trials, leaving the company with zero internal R&D capacity to absorb, test, and implement complex membrane protocol changes [C144].",
+      "sourceIds": [
+       "C144"
+      ],
+      "by": "CTO Shark",
+      "status": "killed",
+      "severity": "dealbreaker",
+      "killReason": "Record C144 does not mention Ana Vuković or her splitting time between production and bench trials.",
+      "killedBy": "critic"
+     },
+     {
+      "id": "Co2",
+      "text": "The core problem at Ferment-Pro is upstream of the membrane: whole cells and cell debris are passing their depth-filter setup before the ultrafiltration skid, meaning membrane cleaning protocols alone will not solve the root cause [C144-CH2].",
+      "sourceIds": [
+       "C144-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Given that your single technologist is already stretched thin between troubleshooting and bench trials, how do you expect to deploy and validate a new cleaning or pre-treatment protocol without halting current production lines?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Ivona Bogdanović is a Full Professor at the Department of Chemical Engineering, Faculty of Technology, specializing in membrane science, ultrafiltration, and fouling characterisation.",
+      "sourceIds": [
+       "R0269"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Ivona Bogdanović has published research on enzymatic pre-treatment with protease to reduce membrane fouling during ultrafiltration of fermentation broths.",
+      "sourceIds": [
+       "SYN-PUB-03380"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Ferment-Pro d.o.o. experiences low nominal throughput during downstream ultrafiltration because membranes foul with residual biomass within 36 hours.",
+      "sourceIds": [
+       "C144-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "Ferment-Pro d.o.o. is a biotech company located in Zrenjanin.",
+      "sourceIds": [
+       "C144"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "The company relies on a single process development technologist, Ana Vukovic, who splits her time between production and small-scale trials, which might constrain the industrial workload required for a three-year industrial PhD thesis.",
+      "sourceIds": [
+       "C144"
+      ],
+      "by": "Professor Shark",
+      "status": "killed",
+      "severity": "concern",
+      "killReason": "Record C144 does not mention Ana Vukovic or her schedule, nor anything about a three-year industrial PhD thesis workload constraint.",
+      "killedBy": "critic"
+     }
+    ],
+    "question": "Given that Ferment-Pro uses 10 kDa spiral-wound polyethersulfone membranes while Professor Bogdanović has extensively published on 30 kDa systems and model fermentation broths, how do you propose bridging the gap to handle the actual whole cells and cell debris breaking through your depth filters?"
+   }
+  },
+  "proposalVersion": 2,
+  "removedProposalClaims": [],
+  "pitchedAt": 6578,
+  "proposal": {
+   "title": "Industrial PhD Proposal: Mitigation of Biomass Fouling in Spiral-Wound Ultrafiltration Membranes for Bioprocess Streams",
+   "kind": "industrial_phd",
+   "summary": "This three-year industrial PhD project tackles severe membrane fouling during fermentation broth ultrafiltration at Ferment-Pro d.o.o. by combining advanced fouling characterisation with optimised pre-treatment and cleaning-in-place protocols. Led by an experienced doctoral candidate under the supervision of Professor Ivona Bogdanović, the research bridges laboratory-scale membrane science with authentic industrial processing conditions. The collaboration targets a reduction in cleaning frequency, restoring nominal throughput and eliminating the 11% production cost penalty.",
+   "problem": "Ferment-Pro d.o.o. suffers from severe membrane fouling during downstream ultrafiltration of fermentation broths, causing operations to run at only 55% of nominal throughput [C144-CH2]. Membranes foul within 36 hours instead of the targeted 72 hours, forcing two cleaning cycles per batch and adding 11% to total production costs [C144-CH2]. Whole cells and cell debris passing through the existing depth-filter setup contribute to this rapid fouling of the 10 kDa spiral-wound polyethersulfone membranes [C144-CH2].",
+   "researchQuestions": [
+    "How do residual whole cells and cell debris breaking through depth filters interact with 10 kDa spiral-wound polyethersulfone membranes to govern flux decline and irreversible fouling resistance?",
+    "To what extent can targeted enzymatic pre-treatment or modified pre-filtration mitigate biomass deposition on 10 kDa polyethersulfone membranes during fermentation broth ultrafiltration?",
+    "What cleaning-in-place protocol adjustments can reliably restore pure water flux and extend membrane operational life from 36 hours to the target 72 hours per cycle?"
+   ],
+   "plan": [
+    {
+     "phase": "Year 1",
+     "work": "Characterise authentic industrial feed streams and fouled 10 kDa spiral-wound polyethersulfone membranes using resistance-in-series models and foulant analysis in the university laboratory.",
+     "result": "Quantification of reversible and irreversible fouling resistances and identification of exact foulant composition from Ferment-Pro production batches."
+    },
+    {
+     "phase": "Year 2",
+     "work": "Evaluate pre-treatment strategies, including protease pre-treatment adaptations and pre-filtration enhancements, on bench-scale cross-flow ultrafiltration rigs using authentic fermentation broths.",
+     "result": "Validated pre-treatment protocol that increases limiting flux and prevents premature biomass accumulation on the membrane surface."
+    },
+    {
+     "phase": "Year 3",
+     "work": "Implement and validate optimized cleaning-in-place protocols and integrated pre-treatment on industrial pilot and production lines at Ferment-Pro d.o.o.",
+     "result": "Extended operational cycle duration from 36 hours to 72 hours, elimination of extra cleaning cycles, and verified reduction of total production costs."
+    }
+   ],
+   "companyBrings": [
+    "Access to industrial production facilities, 1,000 L and 5,000 L fermentation equipment, and authentic process streams.",
+    "Two years of historical pressure and flow log data for every production batch [C144-CH2].",
+    "Co-funding and operational support through process development staff during on-site pilot validation."
+   ],
+   "facultyBrings": [
+    "Expertise in membrane science, ultrafiltration, and fouling characterisation from Professor Ivona Bogdanović [R0269].",
+    "Access to specialized laboratory equipment including cross-flow ultrafiltration rigs and bench-scale clean-in-place test stations [R0269].",
+    "Proven experience in conducting contract research and optimising cleaning-in-place protocols for industrial ultrafiltration lines [R0269]."
+   ],
+   "whyThisPair": [
+    {
+     "id": "w2.1",
+     "text": "Ferment-Pro d.o.o. is a biotech company located in Zrenjanin with 58 employees operating since 1997 [C144].",
+     "sourceIds": [
+      "C144"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w2.2",
+     "text": "Ferment-Pro experiences membrane fouling within 36 hours during ultrafiltration, adding 11% to total production cost [C144-CH2].",
+     "sourceIds": [
+      "C144-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w2.3",
+     "text": "Ivona Bogdanović is a Full Professor at the Department of Chemical Engineering, Faculty of Technology [R0269].",
+     "sourceIds": [
+      "R0269"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w2.4",
+     "text": "Ivona Bogdanović has published research on enzymatic pre-treatment with protease to reduce membrane fouling during ultrafiltration of fermentation broths [SYN-PUB-03380].",
+     "sourceIds": [
+      "SYN-PUB-03380"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "Given that your single technologist is already stretched thin between troubleshooting and bench trials, how do you expect to deploy and validate a new cleaning or pre-treatment protocol without halting current production lines?",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The industrial PhD candidate will execute the lab-scale trials, foulant characterisation, and data analysis at the university laboratory, minimizing disruption to Ferment-Pro operations. On-site trials will be integrated into scheduled batch runs in coordination with the existing technologist."
+    },
+    {
+     "objection": "The core problem at Ferment-Pro is upstream of the membrane: whole cells and cell debris are passing their depth-filter setup before the ultrafiltration skid, meaning membrane cleaning protocols alone will not solve the root cause [C144-CH2].",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The research plan explicitly addresses upstream breakthrough in Phase 1 and Phase 2 by evaluating pre-filtration adjustments and enzymatic pre-treatment to break down residual biomass before it reaches the 10 kDa polyethersulfone membranes."
+    }
+   ],
+   "agreedUpFront": [
+    "Background intellectual property remains with the respective originating party.",
+    "Foreground intellectual property resulting directly from the industrial PhD research will be jointly owned, with commercial licensing terms agreed upon prior to project launch.",
+    "Publication of scientific findings in peer-reviewed journals will be permitted following a standard thirty-day review period to ensure confidentiality of proprietary industrial know-how."
+   ],
+   "firstMeetingAgenda": [
+    "Review historical pressure, flow, and batch log data provided by Ferment-Pro [C144-CH2].",
+    "Inspect current depth-filter and ultrafiltration skid configurations on-site in Zrenjanin.",
+    "Define the protocol for collecting authentic fermentation broth samples for initial laboratory characterisation at the university."
+   ]
+  }
+ },
+ {
+  "pairId": "R0484xC006-CH1",
+  "pitch": {
+   "pairId": "R0484xC006-CH1",
+   "researcherId": "R0484",
+   "challengeId": "C006-CH1",
+   "companyId": "C006",
+   "scout": "Fresh Ink",
+   "lens": "fresh-papers",
+   "headline": "Jovan Puzović and PravniPilot a.d. will improve legal case-outcome predictions using retrieval-augmented generation and imbalanced dataset strategies.",
+   "why": "PravniPilot struggles with a low accuracy of 61% on commercial-dispute rulings due to a small dataset of only 9,000 labeled decisions. Jovan Puzović is an expert in natural language processing, legal informatics, and small sample learning, and recently investigated retrieval-augmented generation for predicting judgment outcomes on Serbian case law.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Jovan Puzović is an Assistant Professor at the Department of Computing and Control Engineering, Faculty of Technical Sciences.",
+     "sourceIds": [
+      "R0484"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Jovan Puzović published a 2026 study on retrieval-augmented generation for predicting judgment outcomes on Serbian case law.",
+     "sourceIds": [
+      "SYN-PUB-02145"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "PravniPilot a.d. is a legal tech company based in Subotica with 78 employees.",
+     "sourceIds": [
+      "C006"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "PravniPilot a.d. has a case-outcome prediction model achieving only 61% accuracy on commercial-dispute rulings with a training set of only 9,000 labelled decisions.",
+     "sourceIds": [
+      "C006-CH1"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "killed",
+  "history": [
+   {
+    "at": 6579,
+    "status": "pitched",
+    "note": "pitched by Fresh Ink"
+   },
+   {
+    "at": 27844,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 79070,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark pass 8/10"
+   },
+   {
+    "at": 79070,
+    "status": "killed",
+    "note": "Professor Shark: dealbreaker: Puzović is co-supervising two PhD students whose dissertations are expected in 2026 to 2027, limiting availability for large new commitments until mid-2026."
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Jovan Puzović is an expert in natural language processing, legal informatics, and small sample learning, and recently investigated retrieval-augmented generation for predicting judgment outcomes on Serbian case law.",
+      "sourceIds": [
+       "R0484",
+       "SYN-PUB-02145"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "PravniPilot a.d. is a legal tech company based in Subotica with 78 employees, featuring an R&D capacity of 14 engineers and two data scientists.",
+      "sourceIds": [
+       "C006"
+      ],
+      "by": "CTO Shark",
+      "status": "killed",
+      "killReason": "C006 states PravniPilot has 78 employees and a development office in NTP Novi Sad and headquarters in Subotica, but does not state it has an R&D capacity of 14 engineers and two data scientists.",
+      "killedBy": "critic"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Puzović notes that he is co-supervising two PhD students whose dissertations are expected in 2026-2027, which limits his availability for large new commitments until mid-2026.",
+      "sourceIds": [
+       "R0484"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Can your team integrate a dense retrieval index and R&D pipeline into our Kubernetes cluster at NTP Novi Sad without disrupting our current two-day-per-week allocation limit?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "pass",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Jovan Puzović is an Assistant Professor at the Department of Computing and Control Engineering, Faculty of Technical Sciences.",
+      "sourceIds": [
+       "R0484"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Jovan Puzović published a 2026 study on retrieval-augmented generation for predicting judgment outcomes on Serbian case law.",
+      "sourceIds": [
+       "SYN-PUB-02145"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "PravniPilot a.d. is a legal tech company based in Subotica with 78 employees.",
+      "sourceIds": [
+       "C006"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "PravniPilot a.d. has a case-outcome prediction model achieving only 61% accuracy on commercial-dispute rulings with a training set of only 9,000 labelled decisions.",
+      "sourceIds": [
+       "C006-CH1"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "Puzović is co-supervising two PhD students whose dissertations are expected in 2026 to 2027, limiting availability for large new commitments until mid-2026.",
+      "sourceIds": [
+       "R0484"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "dealbreaker"
+     },
+     {
+      "id": "Po2",
+      "text": "PravniPilot estimates needing at least 40,000 clean, labeled decisions, while Puzović's recent RAG study tested on only 1,840 decisions, showing a massive scale mismatch.",
+      "sourceIds": [
+       "C006-CH1",
+       "SYN-PUB-02145"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "How do you bridge the gap between your small-scale academic prototype evaluated on 1,840 decisions and PravniPilot's industrial requirement of 40,000 clean decisions while your supervision schedule is constrained until mid-2026?"
+   }
+  },
+  "proposalVersion": 0,
+  "removedProposalClaims": [],
+  "pitchedAt": 6579,
+  "killedBy": "Professor Shark",
+  "killReason": "dealbreaker: Puzović is co-supervising two PhD students whose dissertations are expected in 2026 to 2027, limiting availability for large new commitments until mid-2026."
+ },
+ {
+  "pairId": "R0957xC016-CH1",
+  "pitch": {
+   "pairId": "R0957xC016-CH1",
+   "researcherId": "R0957",
+   "challengeId": "C016-CH1",
+   "companyId": "C016",
+   "scout": "Fresh Ink",
+   "lens": "fresh-papers",
+   "headline": "Predrag Jakovljević and Paleta Kreativa will deploy grammar-error detection tools to assist community managers handling bilingual Serbian and Hungarian accounts.",
+   "why": "Paleta Kreativa manages client accounts in both Serbian and Hungarian where community managers make grammar mistakes during mid-day language switching. Predrag Jakovljević specializes in computational linguistics, bilingualism, and grammar-error detection, having authored a grammar-error detection tool for Serbian language teachers working in bilingual schools.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Predrag Jakovljević is an Assistant Professor at the Department of Teacher Education, Hungarian Language Teacher Training Faculty Subotica.",
+     "sourceIds": [
+      "R0957"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Predrag Jakovljević published a 2025 paper on a grammar-error detection tool for Serbian language teachers working in bilingual schools.",
+     "sourceIds": [
+      "SYN-PUB-10051"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Paleta Kreativa is a marketing tech, media, and creative studio based in Subotica with 6 employees.",
+     "sourceIds": [
+      "C016"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Paleta Kreativa manages 34 client accounts in both Serbian and Hungarian, and community managers make grammar mistakes when switching languages mid-day.",
+     "sourceIds": [
+      "C016-CH1"
+     ],
+     "by": "Fresh Ink",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "killed",
+  "history": [
+   {
+    "at": 6580,
+    "status": "pitched",
+    "note": "pitched by Fresh Ink"
+   },
+   {
+    "at": 37177,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 86547,
+    "status": "grilled",
+    "note": "CTO Shark pass 8/10, Professor Shark pass 8/10"
+   },
+   {
+    "at": 86547,
+    "status": "killed",
+    "note": "CTO Shark: dealbreaker: Paleta Kreativa has no in-house developer or data analyst to integrate or maintain software tools [C016], meaning this requires ongoing custom contractor work rather than a standard product deployment."
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "pass",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Predrag Jakovljević is an Assistant Professor at the Department of Teacher Education, Hungarian Language Teacher Training Faculty Subotica [R0957].",
+      "sourceIds": [
+       "R0957"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Predrag Jakovljević published a 2025 paper on a grammar-error detection tool for Serbian language teachers working in bilingual schools [SYN-PUB-10051].",
+      "sourceIds": [
+       "SYN-PUB-10051"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Paleta Kreativa is a marketing tech, media, and creative studio based in Subotica with 6 employees [C016].",
+      "sourceIds": [
+       "C016"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "Paleta Kreativa manages 34 client accounts in both Serbian and Hungarian, and community managers make grammar mistakes when switching languages mid-day [C016-CH1].",
+      "sourceIds": [
+       "C016-CH1"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Paleta Kreativa has no in-house developer or data analyst to integrate or maintain software tools [C016], meaning this requires ongoing custom contractor work rather than a standard product deployment.",
+      "sourceIds": [
+       "C016"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "dealbreaker"
+     },
+     {
+      "id": "Co2",
+      "text": "Predrag Jakovljević has a heavy teaching load and limited availability outside of summer and the February intersemester break [R0957], making ongoing commercial support impractical for a 60-person NTP company.",
+      "sourceIds": [
+       "R0957"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Given that Paleta Kreativa has no software developers to maintain an integration [C016] and Dr. Jakovljević has limited availability outside of semester breaks [R0957], who will maintain this tool once the initial research project ends?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "pass",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Predrag Jakovljevic is an Assistant Professor at the Department of Teacher Education, Hungarian Language Teacher Training Faculty Subotica [R0957], and published a 2025 paper on a grammar-error detection tool for Serbian language teachers working in bilingual schools [SYN-PUB-10051].",
+      "sourceIds": [
+       "R0957",
+       "SYN-PUB-10051"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Paleta Kreativa is a marketing tech, media, and creative studio based in Subotica with six employees [C016] that manages 34 client accounts in both Serbian and Hungarian [C016-CH1].",
+      "sourceIds": [
+       "C016",
+       "C016-CH1"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "This is consulting or commercial contract work dressed up as research, as Paleta Kreativa needs a production-ready browser extension or writing assistant for social media management, whereas Jakovljevic is an academic whose group lacks software engineering capacity.",
+      "sourceIds": [
+       "R0957",
+       "C016-CH1",
+       "C016"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "dealbreaker"
+     },
+     {
+      "id": "Po2",
+      "text": "Jakovljevic has a relatively heavy teaching load and is mostly available during summer and the February intersemester break, which conflicts with an immediate commercial deployment need.",
+      "sourceIds": [
+       "R0957"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "How do you expect an academic researcher with a heavy teaching load and zero in-house software developers to transform an educational prototype into a reliable commercial tool for 34 active social media accounts?"
+   }
+  },
+  "proposalVersion": 0,
+  "removedProposalClaims": [],
+  "pitchedAt": 6580,
+  "killedBy": "CTO Shark",
+  "killReason": "dealbreaker: Paleta Kreativa has no in-house developer or data analyst to integrate or maintain software tools [C016], meaning this requires ongoing custom contractor work rather than a standard product deployment."
+ },
+ {
+  "pairId": "R0906xC091-CH1",
+  "pitch": {
+   "pairId": "R0906xC091-CH1",
+   "researcherId": "R0906",
+   "challengeId": "C091-CH1",
+   "companyId": "C091",
+   "scout": "First Contact",
+   "lens": "untapped",
+   "headline": "Maja Popović and CardioTrack d.o.o. will collaborate on motion-aware filtering to cut false atrial fibrillation alarms in patch ECG devices.",
+   "why": "CardioTrack d.o.o. faces an issue with too many false atrial fibrillation alarms when patients move. Maja Popović has published benchmark datasets and research specifically addressing motion-corrupted patch ECG and motion-aware filtering.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Maja Popović has no industry experience on record and is open to industrial PhD supervision and joint projects.",
+     "sourceIds": [
+      "K1"
+     ],
+     "by": "First Contact",
+     "status": "killed",
+     "killReason": "cites K1, which does not exist in the dataset",
+     "killedBy": "rule"
+    },
+    {
+     "id": "c2",
+     "text": "Maja Popović published work on cutting false atrial fibrillation alarms in patch ECG with motion-aware filtering.",
+     "sourceIds": [
+      "SYN-PUB-09638"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "CardioTrack d.o.o. is a medical devices company dealing with too many false atrial fibrillation alarms when patients move.",
+     "sourceIds": [
+      "C091",
+      "C091-CH1"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6581,
+    "status": "pitched",
+    "note": "pitched by First Contact"
+   },
+   {
+    "at": 41898,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 92548,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 92548,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 92548,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 178061,
+    "status": "proposed",
+    "note": "proposal ready: Motion-Aware Filtering to Reduce False Atrial Fibrillation Alarms in Patch ECG Devices"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Maja Popović published work specifically addressing the cutting of false atrial fibrillation alarms in patch ECG with motion-aware filtering.",
+      "sourceIds": [
+       "SYN-PUB-09638"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "CardioTrack d.o.o. has a three-axis accelerometer on the patch logging data alongside ECG at 50 Hz, perfectly matching the researcher's framework.",
+      "sourceIds": [
+       "C091-CH1"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Maja Popović leads the HEARTWATCH remote cardiac monitoring project, showing strong alignment with commercial application needs.",
+      "sourceIds": [
+       "SYN-PRJ-0014"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "CardioTrack d.o.o. has an R&D capacity of only two biomedical engineers, which may strain their ability to integrate complex research code into an IEC 62304 compliant product.",
+      "sourceIds": [
+       "C091"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Will Maja Popović provide a production-ready C implementation for the Nordic nRF5340 SoC, or is this academic Python code that our two biomedical engineers will have to rewrite from scratch?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Maja Popović published work on cutting false atrial fibrillation alarms in patch ECG with motion-aware filtering.",
+      "sourceIds": [
+       "SYN-PUB-09638"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "CardioTrack d.o.o. is a medical devices company dealing with too many false atrial fibrillation alarms when patients move.",
+      "sourceIds": [
+       "C091",
+       "C091-CH1"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Maja Popović is an Associate Professor at the Department of Biomedical Engineering at the Faculty of Technical Sciences, University of Novi Sad, whose research focuses on biomedical signal processing and wearable sensing systems.",
+      "sourceIds": [
+       "R0906"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "CardioTrack d.o.o. logs three-axis accelerometer data alongside ECG at 50 Hz on their patch, matching the framework proposed in the research.",
+      "sourceIds": [
+       "C091-CH1",
+       "SYN-PUB-09638"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "CardioTrack d.o.o. has an R&D capacity of only two biomedical engineers, which may create a bandwidth bottleneck for an intensive industrial PhD collaboration.",
+      "sourceIds": [
+       "C091",
+       "R0906"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Given that your company has an R&D capacity of only two engineers, how do you propose to support a rigorous three-year industrial doctoral thesis while maintaining your regulatory and product release cycles?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6581,
+  "proposal": {
+   "title": "Motion-Aware Filtering to Reduce False Atrial Fibrillation Alarms in Patch ECG Devices",
+   "kind": "industrial_phd",
+   "summary": "CardioTrack d.o.o. faces a significant clinical bottleneck where roughly one in four atrial fibrillation alerts in their clinician portal turn out to be motion artifacts. To solve this, Associate Professor Maja Popović will supervise a three-year industrial PhD candidate to integrate her motion-aware filtering framework into CardioTrack's resource-constrained wearable patch. The collaboration leverages CardioTrack's existing three-axis accelerometer data logging at 50 Hz and the researcher's published expertise in false alarm reduction.",
+   "problem": "CardioTrack d.o.o. deals with too many false atrial fibrillation alarms when patients move. When a patient walks fast, reaches overhead, or rolls over in bed, electrode contact changes momentarily and the raw signal looks enough like atrial fibrillation that the current classifier flags it. Right now, roughly one in four AF alerts that land in the clinician portal turns out to be a motion artifact once the cardiologist looks at the raw trace. Clinicians are starting to ignore low-confidence flags entirely, which defeats the purpose of automatic detection.",
+   "researchQuestions": [
+    "How can single-lead ECG signals and 50 Hz three-axis accelerometer data be fused on resource-constrained microcontrollers to suppress motion artifacts without introducing processing latency?",
+    "What adaptive threshold mechanisms can minimize false-positive atrial fibrillation rates during high-motion intervals across diverse patient populations?"
+   ],
+   "plan": [
+    {
+     "phase": "Year 1",
+     "work": "Adapt and optimize the motion-aware filtering algorithm for offline processing using CardioTrack's existing patient recordings and benchmark datasets.",
+     "result": "A validated signal processing pipeline implemented in Python that achieves a target reduction in false atrial fibrillation alerts on historical recordings."
+    },
+    {
+     "phase": "Year 2",
+     "work": "Port the optimized filtering algorithms to embedded C for the Nordic nRF5340 SoC and integrate with TensorFlow Lite for on-device inference.",
+     "result": "An embedded firmware prototype running on the physical patch hardware that processes simultaneous ECG and 50 Hz accelerometer streams in real time."
+    },
+    {
+     "phase": "Year 3",
+     "work": "Conduct bench testing, validate performance against IEC 62304 standards, and complete the doctoral dissertation.",
+     "result": "A fully tested firmware module ready for regulatory integration and a successfully defended industrial PhD thesis."
+    }
+   ],
+   "companyBrings": [
+    "Access to a dataset of approximately 1,400 completed patient recordings tagged by reviewing cardiologists",
+    "Hardware prototyping environment utilizing the Nordic nRF5340 SoC and three-axis accelerometer logging at 50 Hz",
+    "Engineering support from two internal biomedical engineers for integration and IEC 62304 compliance"
+   ],
+   "facultyBrings": [
+    "Published expertise in cutting false atrial fibrillation alarms in patch ECG with motion-aware filtering",
+    "Direct supervision of an industrial PhD candidate through the University of Novi Sad",
+    "Extensive academic background in biomedical signal processing and wearable sensing systems"
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Maja Popović published work specifically addressing the cutting of false atrial fibrillation alarms in patch ECG with motion-aware filtering.",
+     "sourceIds": [
+      "SYN-PUB-09638"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "CardioTrack d.o.o. logs three-axis accelerometer data alongside ECG at 50 Hz on their patch, matching the framework proposed in the research.",
+     "sourceIds": [
+      "C091-CH1",
+      "SYN-PUB-09638"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Maja Popović is an Associate Professor at the Department of Biomedical Engineering at the Faculty of Technical Sciences, University of Novi Sad, focusing on biomedical signal processing and wearable sensing systems.",
+     "sourceIds": [
+      "R0906"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "CardioTrack d.o.o. is a medical devices company dealing with too many false atrial fibrillation alarms when patients move.",
+     "sourceIds": [
+      "C091",
+      "C091-CH1"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "CardioTrack d.o.o. has an R&D capacity of only two biomedical engineers, which may strain their ability to integrate complex research code into an IEC 62304 compliant product and support an intensive industrial PhD collaboration.",
+     "raisedBy": "CTO Shark and Professor Shark",
+     "rebuttal": "The industrial PhD candidate will take primary ownership of algorithm development, translating academic Python prototypes into embedded C for the Nordic nRF5340 SoC, thereby minimizing the direct burden on CardioTrack's two internal engineers."
+    }
+   ],
+   "agreedUpFront": [
+    "All background intellectual property remains with the respective originating party.",
+    "Foreground IP developed jointly during the industrial PhD will be co-owned or licensed according to standard commercial terms agreed prior to project launch.",
+    "Both parties agree to support academic publication of research findings, subject to prior review for patent protection and trade secret preservation."
+   ],
+   "firstMeetingAgenda": [
+    "Review technical specifications of the Nordic nRF5340 SoC and existing firmware architecture.",
+    "Define the precise scope and milestone deliverables for Year 1 of the industrial PhD.",
+    "Establish data sharing protocols for anonymized patient recordings while maintaining medical device compliance."
+   ]
+  }
+ },
+ {
+  "pairId": "R0662xC022-CH3",
+  "pitch": {
+   "pairId": "R0662xC022-CH3",
+   "researcherId": "R0662",
+   "challengeId": "C022-CH3",
+   "companyId": "C022",
+   "scout": "First Contact",
+   "lens": "untapped",
+   "headline": "Nenad Ilić and Njivomer Agro d.o.o. will build and validate an evapotranspiration calculation engine for real-time irrigation scheduling.",
+   "why": "Njivomer Agro d.o.o. needs to add a water-balance module and evapotranspiration modeling for irrigation scheduling, which matches Nenad Ilić's academic expertise in evapotranspiration-based irrigation and decision support applications.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Nenad Ilić has no industry experience listed and is open to joint projects and industrial PhD supervision.",
+     "sourceIds": [
+      "K2"
+     ],
+     "by": "First Contact",
+     "status": "killed",
+     "killReason": "cites K2, which does not exist in the dataset",
+     "killedBy": "rule"
+    },
+    {
+     "id": "c2",
+     "text": "Nenad Ilić published research on evapotranspiration-based irrigation scheduling for sugar beet.",
+     "sourceIds": [
+      "SYN-PUB-07490"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Njivomer Agro d.o.o. requires an expert to build and validate an evapotranspiration calculation engine coupled with soil-type maps.",
+     "sourceIds": [
+      "C022",
+      "C022-CH3"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6582,
+    "status": "pitched",
+    "note": "pitched by First Contact"
+   },
+   {
+    "at": 44443,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 94884,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 8/10"
+   },
+   {
+    "at": 94884,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 94884,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 186124,
+    "status": "proposed",
+    "note": "proposal ready: Evapotranspiration Calculation Engine for Real-Time Irrigation Scheduling"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Nenad Ilić published research on evapotranspiration-based irrigation scheduling for sugar beet.",
+      "sourceIds": [
+       "SYN-PUB-07490"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Njivomer Agro d.o.o. requires an expert to build and validate an evapotranspiration calculation engine coupled with soil-type maps.",
+      "sourceIds": [
+       "C022",
+       "C022-CH3"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Nenad Ilić led the WATERWISE applied research project developing low-cost irrigation advice for smallholders.",
+      "sourceIds": [
+       "SYN-PRJ-0003"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Njivomer Agro d.o.o. does not have a dedicated R&D budget line and requires all work to connect directly to existing software or field services.",
+      "sourceIds": [
+       "C022"
+      ],
+      "by": "CTO Shark",
+      "status": "killed",
+      "severity": "concern",
+      "killReason": "Record C022 mentions company details, services, and plans, but does not state that the company lacks a dedicated R&D budget line or requires work to connect to existing software or field services.",
+      "killedBy": "critic"
+     }
+    ],
+    "question": "How will we package this calculation engine into NjivaManager using your existing two developers and one GIS analyst without disrupting their current feature roadmap?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Nenad Ilic published research on evapotranspiration-based irrigation scheduling for sugar beet.",
+      "sourceIds": [
+       "SYN-PUB-07490"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Nenad Ilic has direct experience with decision support applications and mobile irrigation scheduling tools.",
+      "sourceIds": [
+       "SYN-PUB-07493"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Nivjomer Agro d.o.o. maintains the required agrometeorological stations and spatial soil-type map layers needed as inputs for the calculation engine.",
+      "sourceIds": [
+       "C022-CH3"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "Njivomer Agro d.o.o. lacks a dedicated R&D budget line, meaning all practical work must directly connect to their existing software or field services.",
+      "sourceIds": [
+       "C022"
+      ],
+      "by": "Professor Shark",
+      "status": "killed",
+      "severity": "concern",
+      "killReason": "Record C022 does not mention anything about lacking a dedicated R&D budget line or requiring work to connect directly to existing software or field services.",
+      "killedBy": "critic"
+     }
+    ],
+    "question": "How will you structure the intellectual property and development milestones so that Nenad Ilic can pursue rigorous academic validation while Njivomer Agro d.o.o. integrates the engine into NjivaManager without compromising commercial release timelines?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6582,
+  "proposal": {
+   "title": "Evapotranspiration Calculation Engine for Real-Time Irrigation Scheduling",
+   "kind": "joint_project",
+   "summary": "Njivomer Agro d.o.o. needs to add a water-balance module and evapotranspiration modeling for irrigation scheduling, which matches Nenad Ilić's academic expertise in evapotranspiration-based irrigation and decision support applications. This joint project connects academic evapotranspiration modeling with commercial farm management software to deliver actionable water-balance advice. Both sides will collaborate to integrate, validate, and test the calculation engine within NjivaManager.",
+   "problem": "Njivomer Agro d.o.o. has been asked by several larger farm clients to add irrigation scheduling advice to NjivaManager, but calculating evapotranspiration properly requires knowledge the company does not have in-house [C022-CH3]. Specifically, the company lacks the calculation engine that converts weather station inputs and spatial soil data into a daily water-balance estimate for a given crop and growth stage [C022-CH3].",
+   "researchQuestions": [
+    "How can the Penman-Monteith evapotranspiration model be coupled with spatial soil-type maps to compute daily water-balance estimates in NjivaManager?",
+    "What is the validation accuracy of the integrated evapotranspiration engine when tested against field soil moisture sensor data across target crops?"
+   ],
+   "plan": [
+    {
+     "phase": "Phase 1",
+     "work": "Define algorithm architecture and data integration pipelines connecting agrometeorological station inputs and soil-type map layers to the evapotranspiration model.",
+     "result": "A tested prototype calculation engine delivering daily water-balance estimates."
+    },
+    {
+     "phase": "Phase 2",
+     "work": "Integrate the calculation engine into the NjivaManager software environment and conduct initial calibration using historical agronomic data.",
+     "result": "An embedded water-balance module ready for internal testing."
+    },
+    {
+     "phase": "Phase 3",
+     "work": "Perform on-farm validation of the irrigation scheduling module and establish operational protocols for smallholder and commercial farm deployment.",
+     "result": "A fully validated irrigation scheduling module ready for commercial release."
+    }
+   ],
+   "companyBrings": [
+    "Daily weather station data from three agrometeorological stations maintained near Sombor, Kula, and Odžaci [C022-CH3]",
+    "Spatial soil-type map layers built from legacy Yugoslav soil surveys and own sampling [C022-CH3]",
+    "Two in-house developers and one GIS analyst for software integration and data processing [C022]"
+   ],
+   "facultyBrings": [
+    "Academic expertise in evapotranspiration-based irrigation scheduling [SYN-PUB-07490]",
+    "Direct experience with decision support applications and mobile irrigation scheduling tools [SYN-PUB-07493]",
+    "Methodologies from applied research projects focused on low-cost irrigation advice [SYN-PRJ-0003]"
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Nenad Ilić is an Associate Professor at the Faculty of Agriculture, University of Novi Sad, focusing on irrigation management and decision support systems.",
+     "sourceIds": [
+      "R0662"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "Nenad Ilić published research on evapotranspiration-based irrigation scheduling for sugar beet on chernozem.",
+     "sourceIds": [
+      "SYN-PUB-07490"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Nenad Ilić has experience with smartphone-based decision support applications for real-time irrigation scheduling.",
+     "sourceIds": [
+      "SYN-PUB-07493"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Njivomer Agro d.o.o. maintains agrometeorological stations and spatial soil-type map layers needed as inputs for the calculation engine.",
+     "sourceIds": [
+      "C022-CH3"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.5",
+     "text": "Njivomer Agro d.o.o. has software development capacity through in-house developers and GIS analysts to support integration.",
+     "sourceIds": [
+      "C022"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "How will we package this calculation engine into NjivaManager using your existing two developers and one GIS analyst without disrupting their current feature roadmap?",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "Development will be structured into distinct milestones where the researcher provides the tested mathematical algorithms and Python logic, allowing company developers to handle API integration and UI wrappers with minimal time allocation."
+    },
+    {
+     "objection": "How will you structure the intellectual property and development milestones so that Nenad Ilić can pursue rigorous academic validation while Njivomer Agro d.o.o. integrates the engine into NjivaManager without compromising commercial release timelines?",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "Milestones will decouple core scientific algorithm validation from commercial UI release, allowing academic publication on model performance while granting the company exclusive commercial rights to the embedded software module."
+    }
+   ],
+   "agreedUpFront": [
+    "Njivomer Agro d.o.o. retains commercial exploitation rights for the NjivaManager software integration.",
+    "Nenad Ilić retains the right to publish academic findings regarding model validation and scientific performance.",
+    "Data sharing protocols and input formats are defined prior to project kickoff."
+   ],
+   "firstMeetingAgenda": [
+    "Review available data formats from the Sombor, Kula, and Odžaci weather stations.",
+    "Assess existing soil-type map layer structures in PostGIS.",
+    "Define technical milestones and resource allocation for the two in-house developers and GIS analyst."
+   ]
+  }
+ },
+ {
+  "pairId": "R0904xC047-CH2",
+  "pitch": {
+   "pairId": "R0904xC047-CH2",
+   "researcherId": "R0904",
+   "challengeId": "C047-CH2",
+   "companyId": "C047",
+   "scout": "First Contact",
+   "lens": "untapped",
+   "headline": "Tamara Simić and GridSense Analytics will develop day-ahead PV forecasting models for distribution network feeders.",
+   "why": "GridSense Analytics needs to provide day-ahead forecasts per feeder as rooftop PV changes feeder loads. Tamara Simić has relevant research expertise in day-ahead PV forecasting for distribution feeders using satellite cloud data.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Tamara Simić has no industry experience on record and is open to joint projects and industrial PhD supervision.",
+     "sourceIds": [
+      "K3"
+     ],
+     "by": "First Contact",
+     "status": "killed",
+     "killReason": "cites K3, which does not exist in the dataset",
+     "killedBy": "rule"
+    },
+    {
+     "id": "c2",
+     "text": "Tamara Simić published work on day-ahead PV forecasting for distribution feeders with satellite cloud data.",
+     "sourceIds": [
+      "SYN-PUB-09619"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "GridSense Analytics builds energy software and needs to solve the challenge of day-ahead forecasts per feeder due to rooftop PV integration.",
+     "sourceIds": [
+      "C047",
+      "C047-CH2"
+     ],
+     "by": "First Contact",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6583,
+    "status": "pitched",
+    "note": "pitched by First Contact"
+   },
+   {
+    "at": 47503,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 99242,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 8/10"
+   },
+   {
+    "at": 99242,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 99242,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 189850,
+    "status": "proposed",
+    "note": "proposal ready: Industrial PhD Proposal: Day-Ahead Feeder-Level PV Forecasting Models for Distribution Networks"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Tamara Simić published work on day-ahead PV forecasting for distribution feeders with satellite cloud data.",
+      "sourceIds": [
+       "SYN-PUB-09619"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "GridSense Analytics builds energy software and needs to solve the challenge of day-ahead forecasts per feeder due to rooftop PV integration.",
+      "sourceIds": [
+       "C047",
+       "C047-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "GridSense Analytics has an R&D capacity of only five engineers with one PhD, which may stretch thin when implementing and maintaining production-grade machine learning models on Azure.",
+      "sourceIds": [
+       "C047"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Can this research prototype be containerized to run efficiently on a small Azure virtual machine within your existing FastAPI and Docker stack without blowing up our cloud compute budget?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Tamara Simić published work on day-ahead PV forecasting for distribution feeders with satellite cloud data.",
+      "sourceIds": [
+       "SYN-PUB-09619"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "GridSense Analytics builds energy software and needs to solve the challenge of day-ahead forecasts per feeder due to rooftop PV integration.",
+      "sourceIds": [
+       "C047",
+       "C047-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Tamara Simić is open to industrial PhD supervision and joint projects.",
+      "sourceIds": [
+       "R0904"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "The company has five engineers with only one holding a PhD, which might stretch internal R&D capacity for a full three-year industrial thesis without careful framing.",
+      "sourceIds": [
+       "C047"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Can this day-ahead forecasting framework be packaged efficiently enough to run within the constraints of a small Azure virtual machine while meeting the operational update schedule?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6583,
+  "proposal": {
+   "title": "Industrial PhD Proposal: Day-Ahead Feeder-Level PV Forecasting Models for Distribution Networks",
+   "kind": "industrial_phd",
+   "summary": "GridSense Analytics and Dr. Tamara Simić will develop, containerize, and deploy day-ahead PV forecasting models for distribution network feeders to resolve inaccurate load profiles caused by rooftop solar penetration. The three-year industrial PhD will translate advanced satellite cloud data methodologies into a production-grade Azure environment. Both parties will jointly bridge the gap between academic forecasting models and scalable energy software architecture.",
+   "problem": "Rooftop solar installations are growing rapidly in the areas GridSense Analytics customers serve, meaning standard load profiles no longer reflect actual feeder flows at midday on sunny days. Some feeders now show reverse power flow in the afternoon, causing switching and maintenance decisions to be off by thirty percent or more. Although the company possesses half-hourly smart meter reads, airport weather station data, and licensed satellite irradiance estimates, they lack a model that produces a per-feeder load forecast twenty-four hours ahead, updated each evening and capable of running on a small Azure virtual machine within their existing FastAPI and Docker stack.",
+   "researchQuestions": [
+    "How can hybrid convolutional-recurrent neural network architectures processing satellite cloud motion imagery and numerical weather data be optimized to run within the computational limits of a small Azure virtual machine?",
+    "To what extent can day-ahead per-feeder load forecasting errors driven by reverse power flow from rooftop PV be reduced compared to baseline standard load profiles?",
+    "What model compression and feature reduction techniques maintain day-ahead forecast accuracy while meeting the operational evening update schedule of GridSense Analytics?"
+   ],
+   "plan": [
+    {
+     "phase": "Year 1",
+     "work": "Data ingestion pipeline development and baseline model adaptation using historical smart meter reads, airport weather data, and satellite irradiance estimates.",
+     "result": "A validated core forecasting prototype running in a local Python environment that predicts per-feeder loads twenty-four hours ahead."
+    },
+    {
+     "phase": "Year 2",
+     "work": "Model containerization, optimization, and integration into the GridSense Analytics FastAPI and Docker stack for deployment on a small Azure virtual machine.",
+     "result": "A lightweight, containerized machine learning service that executes the evening update schedule without exceeding Azure compute budgets."
+    },
+    {
+     "phase": "Year 3",
+     "work": "Field testing on live distribution feeder datasets, performance benchmarking against operator requirements, and thesis finalization.",
+     "result": "A fully evaluated production-ready forecasting module, an industrial PhD dissertation, and co-authored technical publications."
+    }
+   ],
+   "companyBrings": [
+    "Access to proprietary smart meter reads, airport weather station data, and licensed satellite irradiance estimates [C047-CH2].",
+    "An established commercial software stack including Python, FastAPI, Docker, and Azure infrastructure [C047].",
+    "Engineering guidance and co-supervision from internal technical staff with prior experience in joint academic collaborations [C047]."
+   ],
+   "facultyBrings": [
+    "World-class research expertise in day-ahead photovoltaic power forecasting for distribution feeders using satellite cloud data [R0904, SYN-PUB-09619].",
+    "Academic supervision for a dedicated industrial PhD candidate at the Faculty of Technical Sciences, University of Novi Sad [R0904].",
+    "Extensive knowledge in smart grids, renewable energy integration, and power system forecasting methodologies [R0904]."
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Tamara Simić is an Associate Professor at the Faculty of Technical Sciences whose research focuses on smart grids, renewable energy integration, and power system forecasting [R0904].",
+     "sourceIds": [
+      "R0904"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "Tamara Simić published work on day-ahead PV forecasting for distribution feeders with satellite cloud data [SYN-PUB-09619].",
+     "sourceIds": [
+      "SYN-PUB-09619"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "GridSense Analytics builds energy software and needs to solve the challenge of day-ahead forecasts per feeder due to rooftop PV integration [C047, C047-CH2].",
+     "sourceIds": [
+      "C047",
+      "C047-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "GridSense Analytics has an R&D team of thirty-one employees, including five engineers with one holding a PhD, and has past experience supervising two master's theses jointly [C047].",
+     "sourceIds": [
+      "C047"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "GridSense Analytics has an R&D capacity of only five engineers with one PhD, which may stretch thin when implementing and maintaining production-grade machine learning models on Azure.",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The industrial PhD structure places primary research execution on the doctoral candidate under Dr. Tamara Simić's supervision, minimizing the load on the five-person engineering team. GridSense Analytics engineers will act primarily in an architectural and integration advisory role, leveraging their prior experience of co-supervising two master's theses."
+    },
+    {
+     "objection": "The company has five engineers with only one holding a PhD, which might stretch internal R&D capacity for a full three-year industrial thesis without careful framing.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "The project scope is tightly bounded around containerizing and deploying a specific existing research methodology rather than exploratory open-ended development. The academic supervisor will handle formal doctoral milestones, ensuring internal company resources remain focused solely on software integration."
+    }
+   ],
+   "agreedUpFront": [
+    "Background intellectual property remains with the respective originating party.",
+    "Foreground intellectual property developed jointly during the industrial PhD will be co-owned, with commercial exploitation rights granted to GridSense Analytics and academic publication rights secured for the researcher.",
+    "All publications will be reviewed prior to submission to ensure proprietary commercial data of GridSense Analytics is protected."
+   ],
+   "firstMeetingAgenda": [
+    "Review sample smart meter and satellite data formats available within the Azure environment.",
+    "Define exact computational resource constraints and memory limits for the target Azure virtual machine.",
+    "Establish the governance framework and meeting cadence between Faculty of Technical Sciences and GridSense Analytics engineers."
+   ]
+  }
+ },
+ {
+  "pairId": "R0209xC102-CH2",
+  "pitch": {
+   "pairId": "R0209xC102-CH2",
+   "researcherId": "R0209",
+   "challengeId": "C102-CH2",
+   "companyId": "C102",
+   "scout": "Bridge Builder",
+   "lens": "bridges",
+   "headline": "Automating spirometry trajectory and reference norm reporting for occupational health clients",
+   "why": "Pulmoteh d.o.o. needs to automate manual spirometry trend reports for occupational health clients, which currently take twelve minutes per patient. Nebojša Crnković brings expertise in respiratory physiology, longitudinal trajectory modelling, and mixed-effects models from the Faculty of Medicine. His published work on occupational FEV1 decline and spirometric reference equations directly addresses this challenge.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Pulmoteh d.o.o. faces a challenge where technicians spend about twelve minutes manually creating spirometry trend reports comparing worker data against reference norms.",
+     "sourceIds": [
+      "C102-CH2"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Nebojša Crnković is an Assistant Professor at the Department of Physiology, Faculty of Medicine, with fields in respiratory physiology and biostatistics.",
+     "sourceIds": [
+      "R0209"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Crnković has published research on occupational dust exposure and accelerated FEV1 decline in grain elevator workers.",
+     "sourceIds": [
+      "SYN-PUB-02674"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Crnković has also published work on penalised spline modelling of height-for-age effects on spirometric reference values.",
+     "sourceIds": [
+      "SYN-PUB-02675"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c5",
+     "text": "Crnković provided consultancy services to a regional occupational health service provider, MedWork d.o.o., advising on spirometry.",
+     "sourceIds": [
+      "R0209"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6584,
+    "status": "pitched",
+    "note": "pitched by Bridge Builder"
+   },
+   {
+    "at": 49872,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 103944,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 103944,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 103945,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 194215,
+    "status": "proposed",
+    "note": "proposal ready: Automating Spirometry Trajectory and Reference Norm Reporting for Occupational Health Clients"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Pulmoteh d.o.o. faces a clear operational bottleneck where technicians spend about twelve minutes manually creating spirometry trend reports, totaling nearly 30 hours of labor per week.",
+      "sourceIds": [
+       "C102-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Nebojša Crnković brings deep expertise in respiratory physiology, biostatistics, and longitudinal trajectory modelling from the Faculty of Medicine.",
+      "sourceIds": [
+       "R0209"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Crnković has direct published research experience with linear mixed-effects models and longitudinal FEV1 trajectories in occupational cohorts.",
+      "sourceIds": [
+       "SYN-PUB-02674"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "Crnković has practical industry experience advising a regional occupational health service provider on spirometric surveillance protocols and interpretation criteria.",
+      "sourceIds": [
+       "R0209"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Pulmoteh has only one software developer and one embedded firmware developer on staff, meaning they lack dedicated internal R&D capacity to integrate a complex statistical module into their Java and SQLite based PulmoTrack desktop application without contractor help.",
+      "sourceIds": [
+       "C102",
+       "C102-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "killed",
+      "severity": "concern",
+      "killReason": "Record C102-CH2 states they have one in-house software developer, but does not mention an embedded firmware developer on staff, nor does C102 mention both roles or SQLite specifically in connection with staffing limitations.",
+      "killedBy": "critic"
+     },
+     {
+      "id": "Co2",
+      "text": "The project risks straying into a custom software contractor job rather than a core R&D collaboration, given that standard GLI-2012 reference equations and automated reporting logic are well-established engineering tasks.",
+      "sourceIds": [
+       "C102-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Can Nebojša deliver this as a pre-packaged algorithm and reference table specification that your single software developer can wire into PulmoTrack within one month, or will this require ongoing statistical research that your team cannot absorb?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Nebojša Crnković brings deep academic expertise in respiratory physiology and longitudinal trajectory modelling, holding a PhD on mixed-effects modelling of spirometric decline [R0209].",
+      "sourceIds": [
+       "R0209"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Crnković has proven domain experience through his published work on occupational dust exposure and accelerated FEV1 decline in grain elevator workers [SYN-PUB-02674].",
+      "sourceIds": [
+       "SYN-PUB-02674"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Pulmoteh d.o.o. faces a concrete operational bottleneck where technicians spend about twelve minutes manually creating spirometry trend reports [C102-CH2].",
+      "sourceIds": [
+       "C102-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "Crnković has direct industry consulting experience advising regional occupational health service providers on spirometric surveillance protocols [R0209].",
+      "sourceIds": [
+       "R0209"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "Pulmoteh d.o.o. lacks a dedicated research function and relies on a very lean software and firmware team, which may create a bandwidth bottleneck for integrating advanced longitudinal models into their PulmoTrack software [C102].",
+      "sourceIds": [
+       "C102"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Given that Pulmoteh relies on a small software team for their desktop application, how do you plan to deploy your mixed-effects trajectory algorithms into their Java and SQLite environment without disrupting their current release cycle?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6584,
+  "proposal": {
+   "title": "Automating Spirometry Trajectory and Reference Norm Reporting for Occupational Health Clients",
+   "kind": "joint_project",
+   "summary": "Pulmoteh d.o.o. and the Faculty of Medicine will collaborate to automate manual spirometry trend reports that currently require twelve minutes per patient and nearly 30 hours of labor per week. Nebojša Crnković will supply validated longitudinal trajectory algorithms and reference specifications that integrate directly into the PulmoTrack software. This joint project establishes an automated module for occupational health clients, eliminating manual spreadsheet calculations.",
+   "problem": "Occupational health regulations require employers to track lung function trends for workers exposed to dust, fumes, or chemicals. Pulmoteh d.o.o. faces an operational bottleneck where technicians spend about twelve minutes manually creating spirometry trend reports comparing worker data against reference norms, totaling nearly 30 hours of labor per week. PulmoTrack stores raw measurement data but lacks an automated module to calculate three-year trajectories and compare them against age- and height-adjusted reference norms.",
+   "researchQuestions": [
+    "How can longitudinal linear mixed-effects models for FEV1 and FVC decline be efficiently implemented within a Java and SQLite software environment without compromising desktop execution speed?",
+    "What parametrization of reference equations and anthropometric stratification curves can be pre-compiled into lookup specifications to automate reporting within the PulmoTrack architecture?"
+   ],
+   "plan": [
+    {
+     "phase": "Phase 1",
+     "work": "Define the mathematical specification for longitudinal trajectory calculations and reference norm comparison, adapting existing mixed-effects models for automated execution.",
+     "result": "A finalized algorithm specification document and validated reference table lookup library for FEV1, FVC, and ratio trends."
+    },
+    {
+     "phase": "Phase 2",
+     "work": "Translate the statistical specification into software integration guidelines and test the algorithms against historical occupational health datasets.",
+     "result": "A pre-packaged algorithm and reference table specification ready for integration by the Pulmoteh software developer into PulmoTrack."
+    },
+    {
+     "phase": "Phase 3",
+     "work": "Validate the automated reports in a clinical or occupational health setting and verify output accuracy against manual calculations.",
+     "result": "A fully functional automated reporting module integrated into the PulmoTrack software release, reducing report generation time to zero manual intervention."
+    }
+   ],
+   "companyBrings": [
+    "PulmoTrack desktop application built on Java with SQLite local database architecture [C102]",
+    "Software and firmware development resources to wire the delivered specifications into the product [C102]",
+    "Access to occupational health client networks and operational workflow data for validation [C102-CH2]"
+   ],
+   "facultyBrings": [
+    "Expertise in respiratory physiology, biostatistics, and longitudinal trajectory modelling from the Faculty of Medicine [R0209]",
+    "Published research experience with linear mixed-effects models and longitudinal FEV1 trajectories in occupational cohorts [SYN-PUB-02674]",
+    "Practical industry experience advising regional occupational health service providers on spirometric surveillance protocols [R0209]"
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Pulmoteh d.o.o. faces a challenge where technicians spend about twelve minutes manually creating spirometry trend reports comparing worker data against reference norms [C102-CH2].",
+     "sourceIds": [
+      "C102-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "Nebojša Crnković is an Assistant Professor at the Department of Physiology, Faculty of Medicine, with fields in respiratory physiology and biostatistics [R0209].",
+     "sourceIds": [
+      "R0209"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Crnković has published research on occupational dust exposure and accelerated FEV1 decline in grain elevator workers [SYN-PUB-02674].",
+     "sourceIds": [
+      "SYN-PUB-02674"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Crnković has also published work on penalised spline modelling of height-for-age effects on spirometric reference values [SYN-PUB-02675].",
+     "sourceIds": [
+      "SYN-PUB-02675"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.5",
+     "text": "Crnković provided consultancy services to a regional occupational health service provider, MedWork d.o.o., advising on spirometry [R0209].",
+     "sourceIds": [
+      "R0209"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "The project risks straying into a custom software contractor job rather than a core R&D collaboration, given that standard reference equations and automated reporting logic are well-established engineering tasks.",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "While standard reference norms exist, translating longitudinal mixed-effects models and adjusting for complex occupational exposure trajectories requires domain-specific biostatistical expertise that bridges clinical physiology and software engineering, ensuring scientific validity rather than simple spreadsheet automation."
+    },
+    {
+     "objection": "Pulmoteh d.o.o. lacks a dedicated research function and relies on a very lean software and firmware team, which may create a bandwidth bottleneck for integrating advanced longitudinal models into their PulmoTrack software.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "The collaboration is scoped precisely to avoid overwhelming the lean team by delivering a pre-packaged algorithm and pre-compiled reference table specification that requires minimal wiring rather than ongoing statistical research during integration."
+    }
+   ],
+   "agreedUpFront": [
+    "Intellectual property generated from the algorithm design remains jointly protected, with Pulmoteh holding exclusive commercial rights to embed the module within PulmoTrack.",
+    "Both parties retain the right to publish academic findings on the anonymized statistical methodology and occupational trajectory analyses."
+   ],
+   "firstMeetingAgenda": [
+    "Review current data structures within the PulmoTrack SQLite database for storing multi-year spirometry records [C102].",
+    "Confirm the exact format of the manual spreadsheet template currently used by clinic technicians [C102-CH2].",
+    "Agree on the milestone schedule for delivering the algorithm specification to Pulmoteh's software developer."
+   ]
+  }
+ },
+ {
+  "pairId": "R0680xC111-CH2",
+  "pitch": {
+   "pairId": "R0680xC111-CH2",
+   "researcherId": "R0680",
+   "challengeId": "C111-CH2",
+   "companyId": "C111",
+   "scout": "Bridge Builder",
+   "lens": "bridges",
+   "headline": "Integrating in-season plant sensing data into variable-rate nutrient prescription algorithms",
+   "why": "Polje360 d.o.o. builds variable-rate application maps using aging soil data and wants to incorporate current-season plant sensing data into their controllers. Đuro Đorđević from the Faculty of Agriculture specializes in precision agriculture, crop protection modelling, and variable-rate application. His research on drone-acquired canopy reflectance indices provides the exact calibration methods needed for in-season nitrogen status.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Polje360 d.o.o. builds variable-rate application maps using soil sampling data that is often two to three years old.",
+     "sourceIds": [
+      "C111-CH2"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Polje360 d.o.o. wants to incorporate current-season plant sensing data so controllers can adjust fertilizer applications dynamically.",
+     "sourceIds": [
+      "C111-CH2"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Đuro Đorđević is a Senior Research Associate at the Department of Field and Vegetable Crops, Faculty of Agriculture, focusing on precision agriculture and agronomy.",
+     "sourceIds": [
+      "R0680"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Đorđević published a study on drone-acquired canopy reflectance indices as in-season proxies for crop nitrogen status in winter wheat.",
+     "sourceIds": [
+      "SYN-PUB-02668"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c5",
+     "text": "Đorđević has integrated historical yield maps into phosphorus prescription models in sunflower production.",
+     "sourceIds": [
+      "SYN-PUB-07652"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6584,
+    "status": "pitched",
+    "note": "pitched by Bridge Builder"
+   },
+   {
+    "at": 57347,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 108855,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 9/10"
+   },
+   {
+    "at": 108855,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 108855,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 201832,
+    "status": "proposed",
+    "note": "proposal ready: Integrating In-Season Plant Sensing Data Into Variable-Rate Nutrient Prescription Algorithms"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Polje360 d.o.o. builds variable-rate application maps using soil sampling data that is often two to three years old.",
+      "sourceIds": [
+       "C111-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Polje360 d.o.o. wants to incorporate current-season plant sensing data so controllers can adjust fertilizer applications dynamically.",
+      "sourceIds": [
+       "C111-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Đuro Đorđević is a Senior Research Associate at the Department of Field and Vegetable Crops, Faculty of Agriculture, focusing on precision agriculture and agronomy.",
+      "sourceIds": [
+       "R0680"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs4",
+      "text": "Đorđević published a study on drone-acquired canopy reflectance indices as in-season proxies for crop nitrogen status in winter wheat.",
+      "sourceIds": [
+       "SYN-PUB-02668"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs5",
+      "text": "Đorđević has integrated historical yield maps into phosphorus prescription models in sunflower production.",
+      "sourceIds": [
+       "SYN-PUB-07652"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Polje360 lacks a dedicated R&D budget line, relying instead on shared capacity between embedded engineers, data analysts, and field agronomists.",
+      "sourceIds": [
+       "C111"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "How will Đuro translate his drone canopy reflectance calibration pipeline into a near real-time automated workflow that feeds directly into the VRS-7 controller without requiring manual post-processing by your data analyst?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 9,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Polje360 d.o.o. builds variable-rate application maps using soil sampling data that is often two to three years old.",
+      "sourceIds": [
+       "C111-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Polje360 d.o.o. wants to incorporate current-season plant sensing data so controllers can adjust fertilizer applications dynamically.",
+      "sourceIds": [
+       "C111-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Đuro Đorđević is a Senior Research Associate at the Department of Field and Vegetable Crops, Faculty of Agriculture, focusing on precision agriculture and agronomy.",
+      "sourceIds": [
+       "R0680"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps4",
+      "text": "Đorđević published a study on drone-acquired canopy reflectance indices as in-season proxies for crop nitrogen status in winter wheat.",
+      "sourceIds": [
+       "SYN-PUB-02668"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps5",
+      "text": "Đorđević has integrated historical yield maps into phosphorus prescription models in sunflower production.",
+      "sourceIds": [
+       "SYN-PUB-07652"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "The company has no separate R&D budget line, which might limit the execution of a multi-year academic collaboration without proper commercial project ring-fencing.",
+      "sourceIds": [
+       "C111"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Given that Polje360 operates without a dedicated R&D budget line, how will you secure the necessary field trial logistics and hardware testing time across commercial farms for the three-year duration required to validate these in-season prescription algorithms?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6584,
+  "proposal": {
+   "title": "Integrating In-Season Plant Sensing Data Into Variable-Rate Nutrient Prescription Algorithms",
+   "kind": "joint_project",
+   "summary": "Polje360 d.o.o. relies on soil sampling data that is often two to three years old for generating variable-rate application maps [C111-CH2]. To overcome this bottleneck, the company will collaborate with Đuro Đorđević from the Faculty of Agriculture to incorporate current-season plant sensing data into their controllers [C111-CH2]. Together, they will build and validate automated workflows that translate drone-acquired canopy reflectance calibration pipelines into dynamic fertilizer adjustments [SYN-PUB-02668].",
+   "problem": "Polje360 builds variable-rate application maps using soil sampling data that is often two to three years old, meaning controllers miss actual within-season crop responses and shifts in nutrient availability [C111-CH2]. Without incorporating current-season plant sensing data, the system cannot dynamically adjust fertilizer applications based on what the crop actually needs right now [C111-CH2].",
+   "researchQuestions": [
+    "How can drone-acquired canopy reflectance indices be operationalized as automated in-season nitrogen status proxies that feed directly into the VRS-7 controller without manual data analyst intervention?",
+    "What calibration methods reliably link multi-spectral vegetation indices across different growth stages to variable nitrogen top-dressing requirements under Pannonian field conditions?"
+   ],
+   "plan": [
+    {
+     "phase": "Year 1",
+     "work": "Establish data pipelines connecting drone multispectral imagery processing routines with Polje360 spatial data infrastructure, and define initial vegetation index calibration thresholds for winter wheat trials.",
+     "result": "A tested data ingestion pipeline that ingests raw multispectral flights and outputs standardized variable-rate prescription maps in ISOXML format."
+    },
+    {
+     "phase": "Year 2",
+     "work": "Execute multi-field validation trials across commercial farms in Vojvodina comparing dynamic in-season prescription outputs against historical soil-only baselines.",
+     "result": "Validated crop-response calibration curves and a measured reduction in nitrogen surplus across trial hectarage."
+    },
+    {
+     "phase": "Year 3",
+     "work": "Finalize the automated near real-time recommendation workflow for the VRS-7 controller and complete documentation and training for field agronomists.",
+     "result": "A commercial-ready software module capable of generating real-time in-season plant-sensing-driven prescription maps."
+    }
+   ],
+   "companyBrings": [
+    "ISOBUS-compatible cab terminals and VRS-7 controller hardware architecture for field testing [C111, C111-CH2].",
+    "PostgreSQL with PostGIS spatial data infrastructure and Python-based back-end integration support [C111].",
+    "Field agronomists and embedded engineers to support commercial trial logistics and hardware integration [C111]."
+   ],
+   "facultyBrings": [
+    "Expertise in precision agriculture, crop protection modelling, and geostatistical calibration [R0680].",
+    "Established methodologies for drone-acquired canopy reflectance indices as in-season nitrogen proxies [SYN-PUB-02668].",
+    "Academic research capacity for experimental design and spatial variability analysis [R0680]."
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Polje360 d.o.o. builds variable-rate application maps using soil sampling data that is often two to three years old [C111-CH2].",
+     "sourceIds": [
+      "C111-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "Polje360 d.o.o. wants to incorporate current-season plant sensing data so controllers can adjust fertilizer applications dynamically [C111-CH2].",
+     "sourceIds": [
+      "C111-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Đuro Đorđević is a Senior Research Associate at the Department of Field and Vegetable Crops, Faculty of Agriculture, focusing on precision agriculture and agronomy [R0680].",
+     "sourceIds": [
+      "R0680"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Đorđević published a study on drone-acquired canopy reflectance indices as in-season proxies for crop nitrogen status in winter wheat [SYN-PUB-02668].",
+     "sourceIds": [
+      "SYN-PUB-02668"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.5",
+     "text": "Đorđević has integrated historical yield maps into phosphorus prescription models in sunflower production [SYN-PUB-07652].",
+     "sourceIds": [
+      "SYN-PUB-07652"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "Polje360 lacks a dedicated R&D budget line, relying instead on shared capacity between embedded engineers, data analysts, and field agronomists.",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The project will leverage existing commercial field operations and ring-fence specific staff hours from the data analyst and field agronomists to ensure dedicated execution without needing a standalone corporate R&D department."
+    },
+    {
+     "objection": "The company has no separate R&D budget line, which might limit the execution of a multi-year academic collaboration without proper commercial project ring-fencing.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "We will structure the collaboration through a formal joint project agreement with defined milestones and shared access to commercial farm trial sites, matching Đorđević's preference for practical field-access arrangements."
+    }
+   ],
+   "agreedUpFront": [
+    "Joint data-use agreement allowing the academic team to utilize anonymized commercial field data for research validation.",
+    "Clear intellectual property terms ensuring Polje360 retains commercial rights to the embedded controller software modules while the academic team retains publication rights for underlying calibration algorithms.",
+    "Mutual agreement on trial site selection and farmer consent protocols across Vojvodina commercial holdings."
+   ],
+   "firstMeetingAgenda": [
+    "Review existing data schema compatibility between Đorđević's drone reflectance processing pipeline and Polje360 PostGIS database architecture.",
+    "Agree on specific winter wheat pilot fields for the first season of in-season sensing trials.",
+    "Define exact roles and time allocations for the company data analyst and faculty researchers."
+   ]
+  }
+ },
+ {
+  "pairId": "R0511xC110-CH2",
+  "pitch": {
+   "pairId": "R0511xC110-CH2",
+   "researcherId": "R0511",
+   "challengeId": "C110-CH2",
+   "companyId": "C110",
+   "scout": "Bridge Builder",
+   "lens": "bridges",
+   "headline": "Developing advanced clinical consistency checks to detect nuanced diagnostic and therapeutic coding errors",
+   "why": "Kognitiva a.d. processes health insurance claims in bulk, but nuanced clinical inconsistencies slip past their basic rules and cause significant reimbursement losses. Róbert Fehér from the Faculty of Medicine specializes in clinical informatics and health data quality. His published research on rule-based detection of diagnostic-therapeutic inconsistencies directly matches the company's need for advanced error detection.",
+   "claims": [
+    {
+     "id": "c1",
+     "text": "Kognitiva a.d. processes bulk health-insurance claims where about 3.2 percent of records contain mismatched diagnosis and procedure codes.",
+     "sourceIds": [
+      "C110-CH2"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c2",
+     "text": "Róbert Fehér is an Assistant Professor at the Department of Internal Medicine, Faculty of Medicine, with expertise in clinical informatics and medical coding.",
+     "sourceIds": [
+      "R0511"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c3",
+     "text": "Fehér published research on rule-based detection of diagnostic-therapeutic inconsistencies in coded hospital records.",
+     "sourceIds": [
+      "SYN-PUB-06002"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c4",
+     "text": "Fehér studied the frequency and pattern of principal diagnosis coding errors in a tertiary hospital in Vojvodina.",
+     "sourceIds": [
+      "SYN-PUB-06000"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    },
+    {
+     "id": "c5",
+     "text": "Fehér provided a three-month consulting engagement to a regional hospital software vendor to advise on the design of a coding plausibility module.",
+     "sourceIds": [
+      "R0511"
+     ],
+     "by": "Bridge Builder",
+     "status": "supported"
+    }
+   ],
+   "version": 1,
+   "secondedBy": []
+  },
+  "status": "proposed",
+  "history": [
+   {
+    "at": 6585,
+    "status": "pitched",
+    "note": "pitched by Bridge Builder"
+   },
+   {
+    "at": 59379,
+    "status": "cleared",
+    "note": "critic cleared the pitch; sharks are grilling"
+   },
+   {
+    "at": 113660,
+    "status": "grilled",
+    "note": "CTO Shark invest 8/10, Professor Shark invest 8/10"
+   },
+   {
+    "at": 113660,
+    "status": "survived",
+    "note": "both sharks invest"
+   },
+   {
+    "at": 113661,
+    "status": "writing",
+    "note": "writer drafting"
+   },
+   {
+    "at": 206099,
+    "status": "proposed",
+    "note": "proposal ready: Advanced Clinical Consistency Checks for Bulk Health-Insurance Claims"
+   }
+  ],
+  "verdicts": {
+   "CTO Shark": {
+    "shark": "CTO Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Cs1",
+      "text": "Kognitiva a.d. processes bulk health-insurance claims where about 3.2 percent of records contain mismatched diagnosis and procedure codes.",
+      "sourceIds": [
+       "C110-CH2"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs2",
+      "text": "Róbert Fehér is an Assistant Professor at the Department of Internal Medicine, Faculty of Medicine, with expertise in clinical informatics and medical coding.",
+      "sourceIds": [
+       "R0511"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Cs3",
+      "text": "Fehér published research on rule-based detection of diagnostic-therapeutic inconsistencies in coded hospital records.",
+      "sourceIds": [
+       "SYN-PUB-06002"
+      ],
+      "by": "CTO Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Co1",
+      "text": "Fehér has a strong preference for collaborations that involve access to real, anonymised hospital discharge data rather than purely synthetic datasets, which may create data governance hurdles.",
+      "sourceIds": [
+       "R0511"
+      ],
+      "by": "CTO Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "Can we map your 214 deterministic rules from past academic work directly into our existing Python and Spark stack to protect our client's €420,000 annual reimbursement losses?"
+   },
+   "Professor Shark": {
+    "shark": "Professor Shark",
+    "verdict": "invest",
+    "confidence": 8,
+    "strengths": [
+     {
+      "id": "Ps1",
+      "text": "Róbert Fehér is an Assistant Professor at the Department of Internal Medicine, Faculty of Medicine, with expertise in clinical informatics and medical coding.",
+      "sourceIds": [
+       "R0511"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps2",
+      "text": "Fehér published research on rule-based detection of diagnostic-therapeutic inconsistencies in coded hospital records.",
+      "sourceIds": [
+       "SYN-PUB-06002"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     },
+     {
+      "id": "Ps3",
+      "text": "Kognitiva a.d. processes bulk health-insurance claims where about 3.2 percent of records contain mismatched diagnosis and procedure codes.",
+      "sourceIds": [
+       "C110-CH2"
+      ],
+      "by": "Professor Shark",
+      "status": "supported"
+     }
+    ],
+    "objections": [
+     {
+      "id": "Po1",
+      "text": "The proposed collaboration relies on bulk commercial insurance claims data, whereas Fehér has a strong preference for actual hospital discharge records and is cautious about automated tools lacking human audit oversight.",
+      "sourceIds": [
+       "R0511"
+      ],
+      "by": "Professor Shark",
+      "status": "supported",
+      "severity": "concern"
+     }
+    ],
+    "question": "How will we bridge the gap between Kognitiva's commercial insurance dataset and your requirement for clinical audit workflows that retain mandatory human oversight?"
+   }
+  },
+  "proposalVersion": 1,
+  "removedProposalClaims": [],
+  "pitchedAt": 6585,
+  "proposal": {
+   "title": "Advanced Clinical Consistency Checks for Bulk Health-Insurance Claims",
+   "kind": "joint_project",
+   "summary": "This one-year joint project integrates deterministic clinical rules into Kognitiva's Python and Spark stack to detect nuanced medical coding inconsistencies. By combining Kognitiva's bulk commercial insurance dataset with Róbert Fehér's clinical informatics expertise, the project addresses the 3.2 percent error rate causing significant reimbursement losses. The collaboration establishes a transparent audit workflow featuring automated flagging alongside mandatory human oversight.",
+   "problem": "Kognitiva a.d. processes bulk health-insurance claims where approximately 3.2 percent of records contain mismatched diagnosis and procedure codes. While basic rules catch obvious errors, nuanced clinical inconsistencies slip past the current engine and caused one client €420,000 in annual reimbursement losses.",
+   "researchQuestions": [
+    "How can deterministic clinical rules from past academic work be mapped directly into Kognitiva's existing Python and Spark stack to flag diagnostic and therapeutic inconsistencies in bulk insurance claims?",
+    "What threshold of probabilistic scoring combined with deterministic rules minimizes false positives while retaining mandatory human audit oversight for clinical data reviewers?"
+   ],
+   "plan": [
+    {
+     "phase": "Phase 1: Rule Mapping and Data Alignment",
+     "work": "Translate academic rule sets into vectorized Python and Spark logic, aligning historical claim attributes with standardized classification taxonomies.",
+     "result": "A core validation library integrated into Kognitiva's data pipeline capable of executing initial consistency checks on historical datasets."
+    },
+    {
+     "phase": "Phase 2: Model Calibration and Pipeline Integration",
+     "work": "Test rule performance against labelled historical claim records, fine-tuning flags to account for multi-variable clinical profiles.",
+     "result": "An optimized detection module deployed in a staging environment with automated performance monitoring dashboards."
+    },
+    {
+     "phase": "Phase 3: Human-in-the-Loop Workflow and Evaluation",
+     "work": "Design and validate the review interface and audit workflows for clinical specialists to inspect flagged claims efficiently.",
+     "result": "A fully documented production-ready anomaly detection module with integrated human review protocols and a final impact assessment report."
+    }
+   ],
+   "companyBrings": [
+    "A production-grade Python and Apache Spark data processing stack",
+    "A labelled dataset of approximately 240,000 historical claims reviewed by human coders",
+    "Engineering support from internal analysts and infrastructure for secure data deployment"
+   ],
+   "facultyBrings": [
+    "Deep expertise in clinical informatics, medical coding, and diagnostic-therapeutic pathways",
+    "Validated methodological frameworks for clinical audit workflows",
+    "Domain guidance on ICD-10 and ICD-11 classification standards"
+   ],
+   "whyThisPair": [
+    {
+     "id": "w1.1",
+     "text": "Kognitiva a.d. processes bulk health-insurance claims where about 3.2 percent of records contain mismatched diagnosis and procedure codes.",
+     "sourceIds": [
+      "C110-CH2"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.2",
+     "text": "Róbert Fehér is an Assistant Professor at the Department of Internal Medicine, Faculty of Medicine, with expertise in clinical informatics and medical coding.",
+     "sourceIds": [
+      "R0511"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.3",
+     "text": "Fehér published research on rule-based detection of diagnostic-therapeutic inconsistencies in coded hospital records.",
+     "sourceIds": [
+      "SYN-PUB-06002"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.4",
+     "text": "Fehér studied the frequency and pattern of principal diagnosis coding errors in a tertiary hospital in Vojvodina.",
+     "sourceIds": [
+      "SYN-PUB-06000"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    },
+    {
+     "id": "w1.5",
+     "text": "Fehér provided a three-month consulting engagement to a regional hospital software vendor to advise on the design of a coding plausibility module.",
+     "sourceIds": [
+      "R0511"
+     ],
+     "by": "Writer",
+     "status": "supported"
+    }
+   ],
+   "risks": [
+    {
+     "objection": "Fehér has a strong preference for collaborations that involve access to real, anonymised hospital discharge data rather than purely synthetic datasets, which may create data governance hurdles.",
+     "raisedBy": "CTO Shark",
+     "rebuttal": "The project utilizes Kognitiva's existing labelled dataset of 240,000 historical claims that have been reviewed by human clinical coders, providing authentic clinical complexity while satisfying privacy requirements through strict anonymisation protocols."
+    },
+    {
+     "objection": "The proposed collaboration relies on bulk commercial insurance claims data, whereas Fehér has a strong preference for actual hospital discharge records and is cautious about automated tools lacking human audit oversight.",
+     "raisedBy": "Professor Shark",
+     "rebuttal": "The architecture explicitly mandates human audit oversight by integrating a review workflow where clinical specialists examine every flagged anomaly, ensuring automated tools serve as decision support rather than unsupervised arbiters."
+    }
+   ],
+   "agreedUpFront": [
+    "All background intellectual property remains with the respective party, and foreground intellectual property developed jointly will be shared for commercial deployment within Kognitiva's platform.",
+    "Both parties agree to publish non-proprietary methodological findings in academic venues following review to protect commercial confidentiality."
+   ],
+   "firstMeetingAgenda": [
+    "Review data governance protocols for accessing and anonymising the historical claims dataset.",
+    "Inspect the existing Python and Spark pipeline architecture alongside the legacy rule definitions.",
+    "Define the specific interface requirements for human-in-the-loop clinical auditing workflows."
+   ]
+  }
+ }
+]
