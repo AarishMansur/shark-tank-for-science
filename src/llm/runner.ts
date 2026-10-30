@@ -26,7 +26,7 @@ export class PitchRoomRunner implements InferenceRunner {
 	constructor(
 		private readonly state: () => PitchRoomState,
 		private readonly recording: Recording,
-		opts: { maxConcurrent: number; rpm: number; replaySpeed: number },
+		opts: { maxConcurrent: number; rpm: number; replaySpeed: number; fallbackModel?: string },
 	) {
 		// Same routing as Mozaik's default runner: pick the endpoint for the model name.
 		this.inner = {
@@ -41,8 +41,10 @@ export class PitchRoomRunner implements InferenceRunner {
 		}
 		this.throttle = new Throttle(opts.maxConcurrent, opts.rpm)
 		this.replaySpeed = opts.replaySpeed
+		this.fallbackModel = opts.fallbackModel
 	}
 	private readonly replaySpeed: number
+	private readonly fallbackModel?: string
 
 	async run(input: InferenceInput): Promise<InferenceOutput> {
 		const key = input.context.id
@@ -79,6 +81,11 @@ export class PitchRoomRunner implements InferenceRunner {
 				lastError = error
 				st.trace.log("model.retry", agent, { key, attempt, error: String((error as any)?.message ?? error).slice(0, 300) })
 				if (!isRetryable(error)) break
+				// Busy or out of quota on the bigger model: fall back to the light one.
+				if (attempt >= 1 && this.fallbackModel && input.model !== this.fallbackModel) {
+					st.trace.log("model.fallback", agent, { key, from: input.model, to: this.fallbackModel })
+					input = { ...input, model: this.fallbackModel }
+				}
 				await sleep(retryDelayMs(error, attempt))
 				continue
 			}

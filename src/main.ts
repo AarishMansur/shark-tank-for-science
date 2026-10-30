@@ -122,6 +122,16 @@ async function main() {
 	const trace = new Trace(join(outDir, "trace.jsonl"))
 	if (!quiet) trace.onLine = (l) => printLine(l, ds)
 
+	const recFile = str("record", "recordings/last-run.json")
+	const saveRec = () => {
+		recording.model = model
+		recording.writerModel = writerModel
+		recording.note = `Live run against ${model} / ${writerModel}. Replay with: npm start -- --replay ${recFile}`
+		saveRecording(recFile, recording)
+	}
+	// Free tier runs are slow; keep the recording on disk as it grows.
+	if (mode === "live") setInterval(saveRec, 15_000).unref()
+
 	const state = await runRoom(ds, opts, recording, trace)
 
 	// Outputs
@@ -137,11 +147,7 @@ async function main() {
 	writeFileSync(join(outDir, "pitch-room.html"), renderHtml(state, files))
 
 	if (mode === "live") {
-		const recFile = str("record", "recordings/last-run.json")
-		recording.model = model
-		recording.writerModel = writerModel
-		recording.note = `Live run against ${model} / ${writerModel}. Replay with: npm start -- --replay ${recFile}`
-		saveRecording(recFile, recording)
+		saveRec()
 		console.log(`\nRecording saved to ${recFile} (${Object.keys(recording.calls).length} model calls)`)
 	}
 	console.log(`\nDone: ${proposed.length} proposals. Outputs in ${outDir}/`)

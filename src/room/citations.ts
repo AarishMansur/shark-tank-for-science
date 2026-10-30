@@ -42,13 +42,15 @@ export function lexicalSupport(ds: Dataset, claim: Pick<Claim, "text" | "sourceI
 	return words.filter((w) => pool.has(w)).length / words.length
 }
 
-export function sourceExcerpts(ds: Dataset, ids: string[], max = 1200): string {
+export function sourceExcerpts(ds: Dataset, ids: string[], max = 2600): string {
 	return ids
 		.map((id) => {
 			const rec = ds.sources.get(id)
 			if (!rec) return `[${id}] (does not exist)`
 			const t = rec.text.replace(/\s+/g, " ")
-			return `[${id}] ${t.length > max ? t.slice(0, max) + "..." : t}`
+			// Authorship lives in the dataset links, not in the abstract text, so state it.
+			const linked = rec.kind === "researcher" || rec.kind === "company" ? "" : ` (${rec.kind}; linked in the dataset to ${rec.owners.map((o) => `${ds.researchers.get(o)?.name ?? ds.companies.get(o)?.name ?? o} [${o}]`).join(", ") || "nobody"})`
+			return `[${id}]${linked} ${t.length > max ? t.slice(0, max) + "..." : t}`
 		})
 		.join("\n")
 }

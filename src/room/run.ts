@@ -29,7 +29,7 @@ export async function runRoom(ds: Dataset, opts: RunOptions, recording: Recordin
 	initializeRuntime({
 		state,
 		inferenceRunnerConfig: {
-			runner: new PitchRoomRunner(() => resolveRuntime().state, recording, { maxConcurrent: opts.maxConcurrent, rpm: opts.rpm, replaySpeed: opts.replaySpeed }),
+			runner: new PitchRoomRunner(() => resolveRuntime().state, recording, { maxConcurrent: opts.maxConcurrent, rpm: opts.rpm, replaySpeed: opts.replaySpeed, fallbackModel: opts.model }),
 		},
 	})
 

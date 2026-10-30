@@ -19,6 +19,8 @@ export function createCritic(): Agent {
 A claim is supported only if the cited record text states it or directly implies it. Being on the same topic is not enough.
 Unsupported: invented papers, skills, numbers or experience; a record that says something different; a claim that stretches a keyword into expertise; any statement about a person's worth.
 Be strict but fair: paraphrase is fine, and claims about what a company needs are supported by the challenge text.
+How to read the records: a publication, project or patent "linked in the dataset to" a person is theirs (they wrote it or took part). A researcher record's "Industry experience" and "Notes" lines are evidence about that person, and a company record's "R&D capacity" and "Past collaborations" lines are evidence about that company.
+Shark objections often mix a fact with a judgment ("only two developers, so integration is a risk"). Judge the factual part: if the record states the fact, the claim is supported; the judgment is the shark's to make.
 Do not use em dashes.`,
 		tools: [],
 		handlers: [
