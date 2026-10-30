@@ -103,6 +103,7 @@ function review(agent: Agent, card: PairCard, claims: Claim[], purpose: string, 
 		purpose,
 		pairId: card.pairId,
 		prompt: `Check each claim against the records it cites.
+Code has already verified that every cited record exists and belongs to this researcher or this company, so never reject a claim because a record does not name the person; judge only whether the content supports the claim.
 
 Claims:
 ${keyed.map((k) => `- (${k.key}) [by ${k.claim.by}] ${k.claim.text}  cites: ${k.claim.sourceIds.join(", ")}`).join("\n")}

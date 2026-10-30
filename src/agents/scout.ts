@@ -35,7 +35,7 @@ ${HOUSE_RULES}`,
 					.join("\n\n")
 				ask(agent, {
 					purpose: "pitch",
-					prompt: `Shortlist:\n\n${blocks}\n\nPitch at most ${st.config.pitchesPerScout} candidates. For each, give 3 to 5 claims, each with the record ids that prove it. Return fewer pitches if fewer deserve it.`,
+					prompt: `Shortlist:\n\n${blocks}\n\nPitch at most ${st.config.pitchesPerScout} candidates. For each, give 3 to 5 claims, each with the record ids that prove it. K1, K2 and so on are shortlist labels, not records: never cite them as sources. Return fewer pitches if fewer deserve it.`,
 					schema: pitchSchema,
 					mock: () => mockPitches(shortlist, st.config.pitchesPerScout),
 					onAnswer: (out) => {

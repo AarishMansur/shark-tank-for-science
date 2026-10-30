@@ -41,6 +41,16 @@ const problems: Lens = {
 	scout: "Problem Hunter",
 	brief: "You start from company challenges and look for the researcher whose published work most directly attacks the problem.",
 	shortlist(ds, size, challengeIds) {
+		if (challengeIds.length <= 3) {
+			// Reverse search: the closest profiles to the one problem.
+			const cands = challengeIds.flatMap((cid) =>
+				ds.researcherIndex
+					.search(ds.challengeDoc(ds.challenges.get(cid)!), size * 3)
+					.filter((h) => pitchable(ds, ds.researchers.get(h.id)))
+					.map((h) => ({ researcherId: h.id, challengeId: cid, score: h.score, reason: `close profile to the problem text (BM25 ${h.score.toFixed(1)})` })),
+			)
+			return pickDistinct(cands.sort(byScore), size, ds)
+		}
 		const cands = challengeIds.flatMap((cid) => {
 			const ref = ds.challenges.get(cid)!
 			const hit = ds.researcherIndex
@@ -124,15 +134,17 @@ const bridges: Lens = {
 			const count = new Map<string, number>()
 			for (const h of hits.slice(0, 5)) count.set(ds.faculty.get(h.id)!, (count.get(ds.faculty.get(h.id)!) ?? 0) + 1)
 			const home = [...count.entries()].sort((a, b) => b[1] - a[1])[0][0]
-			const bridge = hits.find((h) => ds.faculty.get(h.id) !== home && h.score >= 0.6 * hits[0].score)
-			if (!bridge) continue
-			const rel = bridge.score / hits[0].score
-			cands.push({
-				researcherId: bridge.id,
-				challengeId: cid,
-				score: rel * bridge.score,
-				reason: `the usual faculty for this problem is ${home}; this researcher is from ${ds.faculty.get(bridge.id)} and still scores ${(rel * 100).toFixed(0)}% of the top match`,
-			})
+			// One bridge per challenge, or every bridge when there is only one problem (reverse search).
+			const bridges = hits.filter((h) => ds.faculty.get(h.id) !== home && h.score >= 0.6 * hits[0].score).slice(0, challengeIds.length <= 3 ? size : 1)
+			for (const bridge of bridges) {
+				const rel = bridge.score / hits[0].score
+				cands.push({
+					researcherId: bridge.id,
+					challengeId: cid,
+					score: rel * bridge.score,
+					reason: `the usual faculty for this problem is ${home}; this researcher is from ${ds.faculty.get(bridge.id)} and still scores ${(rel * 100).toFixed(0)}% of the top match`,
+				})
+			}
 		}
 		return pickDistinct(cands.sort(byScore), size, ds)
 	},
