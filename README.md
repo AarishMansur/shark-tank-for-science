@@ -2,6 +2,10 @@
 
 Entry for the NTP Novi Sad AI Hackathon, **EINSTEIN track** (Science-to-Business Matchmaker). Built on [Mozaik](https://www.npmjs.com/package/@mozaik-ai/core) with Gemini.
 
+**Live pitch rooms:** https://aarishmansur.github.io/shark-tank-for-science/ (the two recorded runs, playable in the browser, nothing to install)
+
+[![The pitch room at the end of the recorded main run](docs/pitch-room.png)](https://aarishmansur.github.io/shark-tank-for-science/main-run.html)
+
 The University of Novi Sad has over a thousand researchers and NTP Novi Sad has 150 companies, but they rarely work together. This project is a pitch room where agents find researcher and company pairs worth a joint project or an industrial PhD. A pair only becomes a proposal if it gets through the room:
 
 1. **Four scouts** search the dataset at the same time, each with a different lens, and pitch the pairs they believe in.
