@@ -71,4 +71,5 @@ export type PairCard = {
 	proposalVersion: number
 	removedProposalClaims: Claim[]
 	pitchedAt: number
+	wildcard?: boolean
 }
