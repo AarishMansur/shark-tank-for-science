@@ -142,9 +142,10 @@ cp .env.example .env    # put GEMINI_API_KEY=... in it
 npm start               # live run over every challenge, about 70 model calls
 npm run reverse -- "describe your problem"
 npm start -- --sector agri --pitches 2
+npm start -- --approve  # a person approves or rejects each pair before a proposal is written
 ```
 
-Useful options: `--pitches N` per scout, `--sector <name>`, `--rpm` and `--concurrency` for the throttle, `--record <file>` to name the recording, `--resume <file>` to finish a run that hit a quota, `--speed 0` for an instant replay. `MODEL` and `WRITER_MODEL` choose the Gemini models (both default to `gemini-3.5-flash-lite`).
+Useful options: `--pitches N` per scout, `--sector <name>`, `--rpm` and `--concurrency` for the throttle, `--record <file>` to name the recording, `--resume <file>` to finish a run that hit a quota, `--speed 0` for an instant replay, `--approve` for the human approval gate (below). `MODEL` and `WRITER_MODEL` choose the Gemini models (both default to `gemini-3.5-flash-lite`).
 
 Every run writes to `runs/<timestamp>-<mode>/`:
 
@@ -181,11 +182,12 @@ Every proposal ends with the sharks' questions and the claims the critic removed
 - **Availability is respected.** Profiles that say someone retired or left are excluded from the scouts' shortlists, and caveats such as limited capacity or a sabbatical are printed at the top of the proposal.
 - **Profiles are not judged.** Thin profiles (no bio, keywords only) are pitched on what is there, and the First Contact lens exists to give researchers without industry ties a fair look.
 - **A person decides.** Output is a proposal for a conversation, not a decision. The trace makes every step auditable.
+- **Human approval gate.** With `--approve`, a Human reviewer joins the room as a Mozaik human participant. Every pair that survives the sharks stops before the Writer: the terminal shows the pair, the headline and the verdicts, and asks `y/n` plus an optional note. Only approved pairs get a proposal. A rejected pair is killed by the Human reviewer with the note as the reason, and it is never promoted as a wildcard. Each answer is written to the trace as a `human.decision` event, kept in the recording, and played back by `--replay`. The pitch room marks a pair waiting for a person and shows human yes or no on the card, and the proposal states that a person approved it. If the terminal closes, any open pair counts as rejected, so nothing is written without a yes.
 - **Model data.** Only record text needed for a pair goes to Gemini. Do not run it on real personal data without the consent of the people in it and a provider agreement that fits.
 
 ## What doesn't work yet
 
-- **The critic is a model and can be wrong both ways.** In the recorded run it rejected two shark objections about Ferment-Pro's staff that are in the company record: the critic was shown records cut at 2,600 characters and that detail sat past the cut. The limit is now 4,000, which covers every profile and company record in the dataset, but the recording keeps the old behaviour. The rules layer is exact; the model layer is not. A fixed set of hand labelled claims to measure it against would be the next step.
+- **The critic is a model and can be wrong both ways.** In the recorded run it rejected two shark objections about Ferment-Pro's staff that are in the company record: the critic was shown records cut at 2,600 characters and that detail sat past the cut. The limit is now 4,000, which covers every profile and company record in the dataset, but the recording keeps the old behaviour. The rules layer is exact; the model layer is not. `npm run eval:critic` measures it on hand labelled claims (see Measuring the critic): one false kill in 48 true claim checks, on an easier set than real pitches.
 - **Light models only, on the free tier.** The recorded run uses `gemini-3.5-flash-lite` everywhere. Proposals are good but sometimes generic in the plan section; a stronger writer model would help and is one environment variable away.
 - **Lexical search.** Shortlists come from BM25 over folded text, which misses synonyms across fields. Embeddings would find more surprising pairs, at a cost.
 - **The company pages are not used.** `company-pages.jsonl` (websites, job ads, news) would sharpen the CTO Shark. Not done in time.
@@ -202,7 +204,7 @@ Every proposal ends with the sharks' questions and the claims the critic removed
 | Proposals (25) | 9 proposals for 9 different pairs in `runs/recorded/main-run/proposals/`, shaped after the dataset's industrial PhD example: problem, research questions, three phase plan, what each side brings, why this pair, risks and rebuttals, IP and publication terms, first meeting agenda. |
 | Accuracy and transparency (20) | Every claim cites record ids. Two layer critic with every kill logged (`critic.kill` with layer and reason). Full JSONL trace with tokens and latency per call, replayable with no key. |
 | Real use in EINSTEIN (15) | Reverse search for companies and Stars applicants, the four step plan above, availability caveats, wildcards clearly labelled. |
-| Responsible data (10) | Synthetic data only, pairs not people, cite or die, fail closed, a person makes the introduction. |
+| Responsible data (10) | Synthetic data only, pairs not people, cite or die, fail closed, an optional human approval gate before any proposal, a person makes the introduction. |
 
 ## Project layout
 
@@ -212,11 +214,12 @@ src/
   runtime.ts         the Mozaik runtime for the room
   data/              dataset loading, text folding (Latin and Cyrillic), BM25, faculty names
   room/              events, state, lenses, evidence packs, citation rules, trace, run
-  agents/            scout, critic, shark, writer, chair, recorder
+  agents/            scout, critic, shark, writer, chair, recorder, human reviewer
   llm/               throttled runner (live, replay, mock), recording, ask helper
   report/            proposals, summary, terminal view, pitch room page
 recordings/          recorded live runs for --replay
 runs/recorded/       outputs of the recorded runs
+eval/                critic eval cases, saved answers and results
 tests/               node:test suites and a small fixture dataset
 ```
 
