@@ -13,6 +13,7 @@
     "start": "tsx src/main.ts",
     "replay": "tsx src/main.ts --replay recordings/main-run.json",
     "replay:reverse": "tsx src/main.ts --replay recordings/reverse-run.json",
+    "eval:critic": "tsx src/eval/critic-eval.ts",
     "mock": "tsx src/main.ts --mock",
     "reverse": "tsx src/main.ts --problem",
     "test": "node --import tsx --test tests/*.test.ts",

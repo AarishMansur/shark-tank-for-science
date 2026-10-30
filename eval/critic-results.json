@@ -1,0 +1,599 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "reps": 3,
+ "falseTotal": 22,
+ "trueTotal": 16,
+ "caught": [
+  22,
+  22,
+  22
+ ],
+ "falseKills": [
+  0,
+  0,
+  1
+ ],
+ "ruleCaught": 8,
+ "lexical": {
+  "caught": 10,
+  "falseKills": 0
+ },
+ "runs": [
+  {
+   "F01": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-07490, which belongs to R0662, not to R0904 or C047"
+   },
+   "F02": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-09619, which belongs to R0904, not to R0662 or C022"
+   },
+   "F03": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-01610, which belongs to R0881, R0122, not to R0128 or C022"
+   },
+   "F04": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-00202, which belongs to R0191, R0017, not to R0435 or C047"
+   },
+   "F05": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-99999, which does not exist in the dataset"
+   },
+   "F06": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PAT-777, which does not exist in the dataset"
+   },
+   "F07": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "no source cited"
+   },
+   "F08": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "quotes \"a ready-to-deploy commercial irrigation engine for large fa...\" but that text is not in the cited records"
+   },
+   "T03": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record SYN-PRJ-0010 explicitly states that Prof. Simic participates in the FLEXGRID-RS Horizon Europe project."
+   },
+   "F13": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PUB-09621 states the study used 12 distribution substations, not 40."
+   },
+   "T08": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C047-CH2 states that some feeders that used to peak in the evening now show reverse power flow in the afternoon because of rooftop solar."
+   },
+   "T04": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C047 states that GridSense Analytics has 31 employees and is based at NTP Novi Sad."
+   },
+   "T05": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C047-CH2 states they need a per-feeder load forecast 24 hours ahead that runs on a small Azure virtual machine."
+   },
+   "F19": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record R0904 explicitly lists industry experience as none listed."
+   },
+   "T06": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-09621 is a publication on probabilistic short-term load forecasting with gradient boosting authored by Tamara Simic."
+   },
+   "T02": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-09619 is a publication authored by Tamara Simic on day-ahead PV forecasting for distribution feeders using satellite cloud data."
+   },
+   "F10": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The challenge text states the target is below fifteen percent mean absolute percentage error, not five percent."
+   },
+   "F09": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The company record states there are 31 employees, not 130."
+   },
+   "F18": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The challenge text states the model needs to run on a small virtual machine in Azure, not a large GPU cluster in AWS."
+   },
+   "T01": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The researcher record confirms she is an Associate Professor at the Faculty of Technical Sciences."
+   },
+   "F15": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The company record states it was founded in Novi Sad in 2017, not Belgrade in 2010."
+   },
+   "F16": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The company record states customers are in Serbia, Bosnia and Herzegovina, and North Macedonia, not Germany and Austria."
+   },
+   "F20": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The researcher record specifies she is an Associate Professor, contradicting the claim that she is a Full Professor."
+   },
+   "T07": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The researcher record explicitly states she is open to supervising industrial PhD candidates."
+   },
+   "F14": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states the probes were calibrated across five soil types, not twelve."
+   },
+   "T12": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record states they receive daily weather station data from three agrometeorological stations they maintain."
+   },
+   "F17": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states clients grow sunflower, maize, soy, sugar beet, and winter wheat, not rice and cotton."
+   },
+   "T10": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record states the patent is for a capacitive soil moisture probe with a multi-depth sensing array and its status is granted."
+   },
+   "T14": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record describes the design, implementation, and on-farm evaluation of a smartphone application for real-time irrigation scheduling."
+   },
+   "F21": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The patent record is for a capacitive soil moisture probe with a multi-depth sensing array, not a drone-mounted multispectral camera."
+   },
+   "F12": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states they maintain three stations, not seven."
+   },
+   "F11": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states they work with roughly 320 farms, not 3,200."
+   },
+   "T16": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022-CH3 states that none of the staff understands evapotranspiration modelling and they cannot implement it correctly."
+   },
+   "T09": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-07490 states the study evaluated a Penman-Monteith-based model for sugar beet on chernozem soils."
+   },
+   "F22": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PRJ-0003 states the project was funded by the Provincial Secretariat for Higher Education, not Horizon Europe."
+   },
+   "T15": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record R0662 states under Industry experience that none is listed."
+   },
+   "T11": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022 states they work with roughly 320 farms across western Vojvodina."
+   },
+   "T13": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PRJ-0003 states Nenad Ilic led the WATERWISE project as principal investigator, aimed at irrigation advice for smallholder farmers."
+   }
+  },
+  {
+   "F01": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-07490, which belongs to R0662, not to R0904 or C047"
+   },
+   "F02": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-09619, which belongs to R0904, not to R0662 or C022"
+   },
+   "F03": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-01610, which belongs to R0881, R0122, not to R0128 or C022"
+   },
+   "F04": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-00202, which belongs to R0191, R0017, not to R0435 or C047"
+   },
+   "F05": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-99999, which does not exist in the dataset"
+   },
+   "F06": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PAT-777, which does not exist in the dataset"
+   },
+   "F07": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "no source cited"
+   },
+   "F08": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "quotes \"a ready-to-deploy commercial irrigation engine for large fa...\" but that text is not in the cited records"
+   },
+   "F10": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The challenge text states a good outcome is a forecast error below fifteen percent mean absolute percentage error, not five percent."
+   },
+   "F15": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states the company was founded in Novi Sad in 2017, not Belgrade in 2010."
+   },
+   "T01": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record states Tamara Simić is an Associate Professor in the Faculty of Technical Sciences."
+   },
+   "F20": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states she is an Associate Professor, which contradicts being a Full Professor."
+   },
+   "F18": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The challenge text states the model needs to run on a small virtual machine inside Azure, not a large GPU cluster in AWS."
+   },
+   "F19": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record explicitly states her industry experience is none listed."
+   },
+   "F13": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The publication states the model was trained and validated on data from 12 distribution substations, not 40."
+   },
+   "T04": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record states the company has 31 employees and is based at NTP Novi Sad."
+   },
+   "T07": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record R0904 explicitly states that Tamara Simic is open to supervising industrial PhD candidates."
+   },
+   "T03": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record R0904 and SYN-PRJ-0010 both state that Tamara Simic participates in the Horizon Europe project FLEXGRID-RS."
+   },
+   "T06": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-09621 is authored by Tamara Simic and covers probabilistic short-term load forecasting with gradient boosting."
+   },
+   "F09": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C047 states that GridSense Analytics has thirty-one employees, not 130."
+   },
+   "T05": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C047-CH2 states they need a per-feeder load forecast twenty-four hours ahead that runs on a small virtual machine inside their Azure environment."
+   },
+   "F16": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C047 states their customers are distribution operators in Serbia, Bosnia and Herzegovina, and North Macedonia, not Germany and Austria."
+   },
+   "T02": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-09619 is authored by Tamara Simic and covers day-ahead PV forecasting for distribution feeders using satellite cloud data."
+   },
+   "T08": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C047-CH2 states that some feeders that used to peak in the evening now show reverse power flow in the afternoon because of rooftop solar installations."
+   },
+   "T09": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-07490 states that the study evaluated a Penman-Monteith-based evapotranspiration model for sugar beet on chernozem."
+   },
+   "T12": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022-CH3 states that they receive daily weather station data from three agrometeorological stations they maintain."
+   },
+   "F17": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022 states that clients grow sunflower, maize, soy, sugar beet, and winter wheat, not rice and cotton."
+   },
+   "T10": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PAT-001 confirms a granted patent for a capacitive soil moisture probe with a multi-depth sensing array."
+   },
+   "T11": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022 states that they work with roughly 320 farms across western Vojvodina."
+   },
+   "F14": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PUB-07491 states calibration across five soil types, not twelve."
+   },
+   "F12": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022-CH3 states they maintain three stations, not seven."
+   },
+   "F11": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022 states they work with roughly 320 farms, not 3,200."
+   },
+   "T15": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record explicitly states industry experience: none listed."
+   },
+   "T16": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The challenge text states that none of their staff understands evapotranspiration modelling, supporting the claim that building the engine is a risk."
+   },
+   "F22": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The project was funded by the Provincial Secretariat for Higher Education, not Horizon Europe."
+   },
+   "F21": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The patent is for a capacitive soil moisture probe with a multi-depth sensing array, not a drone-mounted multispectral camera."
+   },
+   "T13": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The record states WATERWISE was led by Nenad Ilić as principal investigator and aimed at irrigation advice for smallholder farmers."
+   },
+   "T14": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The publication describes the design, implementation, and on-farm evaluation of a smartphone application for real-time irrigation scheduling."
+   }
+  },
+  {
+   "F01": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-07490, which belongs to R0662, not to R0904 or C047"
+   },
+   "F02": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-09619, which belongs to R0904, not to R0662 or C022"
+   },
+   "F03": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-01610, which belongs to R0881, R0122, not to R0128 or C022"
+   },
+   "F04": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-00202, which belongs to R0191, R0017, not to R0435 or C047"
+   },
+   "F05": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PUB-99999, which does not exist in the dataset"
+   },
+   "F06": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "cites SYN-PAT-777, which does not exist in the dataset"
+   },
+   "F07": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "no source cited"
+   },
+   "F08": {
+    "killed": true,
+    "layer": "rule",
+    "reason": "quotes \"a ready-to-deploy commercial irrigation engine for large fa...\" but that text is not in the cited records"
+   },
+   "F10": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states a forecast error below fifteen percent, not five percent."
+   },
+   "T01": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Supported by R0904 which states Tamara Simić is an Associate Professor at the Faculty of Technical Sciences."
+   },
+   "F15": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states GridSense Analytics was founded in 2017 in Novi Sad, not Belgrade in 2010."
+   },
+   "T05": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Supported by C047-CH2 which states the need for a per-feeder load forecast 24 hours ahead running on a small Azure virtual machine."
+   },
+   "T06": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Supported by SYN-PUB-09621 which discusses probabilistic short-term load forecasting with gradient boosting."
+   },
+   "T02": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Supported by SYN-PUB-09619 which covers day-ahead PV forecasting for distribution feeders using satellite cloud data."
+   },
+   "T07": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Supported by R0904 which states she is open to supervising industrial PhD candidates."
+   },
+   "T04": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states it was founded in 2017, whereas the claim implies a founding detail error and mismatch with founding city."
+   },
+   "F18": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states the forecast needs to run inside an Azure environment on a small virtual machine, not on a large GPU cluster in AWS."
+   },
+   "F13": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The study used 12 distribution substations, not 40."
+   },
+   "T03": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The project record confirms Prof. Simić participates in the FLEXGRID-RS Horizon Europe project."
+   },
+   "T08": {
+    "killed": false,
+    "layer": "none",
+    "reason": "The challenge text states that some feeders that used to peak in the evening now show reverse power flow in the afternoon."
+   },
+   "F20": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states Tamara Simić is an Associate Professor, not a Full Professor."
+   },
+   "F19": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record lists industry experience as none listed."
+   },
+   "F16": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states customers are in Serbia, Bosnia and Herzegovina, and North Macedonia, not Germany and Austria."
+   },
+   "F09": {
+    "killed": true,
+    "layer": "model",
+    "reason": "The record states the company has 31 employees, not 130."
+   },
+   "F12": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022-CH3 states they maintain three stations, not seven."
+   },
+   "F22": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PRJ-0003 states the project was funded by the Provincial Secretariat for Higher Education, not Horizon Europe."
+   },
+   "T09": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-07490 states the study evaluated a Penman-Monteith-based model for sugar beet on chernozem."
+   },
+   "T10": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PAT-001 is a granted patent titled Capacitive soil moisture probe with a multi-depth sensing array."
+   },
+   "T12": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022-CH3 states they receive daily weather station data from three agrometeorological stations they maintain."
+   },
+   "F21": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PAT-001 is for a capacitive soil moisture probe, not a drone-mounted multispectral camera."
+   },
+   "T11": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022 states they work with roughly 320 farms across western Vojvodina."
+   },
+   "T14": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PUB-07493 describes the design, implementation, and on-farm evaluation of a smartphone application for real-time irrigation scheduling."
+   },
+   "F17": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022 lists sunflower, maize, soy, sugar beet, and winter wheat, not rice and cotton."
+   },
+   "T16": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record C022-CH3 states that none of their staff understands evapotranspiration modelling, making it a risk."
+   },
+   "F14": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record SYN-PUB-07491 states calibration was across five soil types, not twelve."
+   },
+   "F11": {
+    "killed": true,
+    "layer": "model",
+    "reason": "Record C022 states they work with roughly 320 farms, not 3,200."
+   },
+   "T13": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record SYN-PRJ-0003 states Nenad Ilić led the WATERWISE project on irrigation advice for smallholder farmers."
+   },
+   "T15": {
+    "killed": false,
+    "layer": "none",
+    "reason": "Record R0662 states industry experience: none listed."
+   }
+  }
+ ]
+}

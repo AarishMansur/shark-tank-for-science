@@ -1,0 +1,443 @@
+{
+ "note": "Hand labelled claims against the synthetic EINSTEIN dataset. F = planted false claim, T = true claim.",
+ "pairs": {
+  "P1": {
+   "researcherId": "R0904",
+   "companyId": "C047",
+   "challengeId": "C047-CH2"
+  },
+  "P2": {
+   "researcherId": "R0662",
+   "companyId": "C022",
+   "challengeId": "C022-CH3"
+  },
+  "P3": {
+   "researcherId": "R0128",
+   "companyId": "C022",
+   "challengeId": "C022-CH3"
+  },
+  "P4": {
+   "researcherId": "R0435",
+   "companyId": "C047",
+   "challengeId": "C047-CH2"
+  }
+ },
+ "cases": [
+  {
+   "id": "F01",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-researcher",
+   "text": "Tamara Simić has evaluated Penman-Monteith irrigation scheduling for sugar beet.",
+   "sourceIds": [
+    "SYN-PUB-07490"
+   ],
+   "why": "SYN-PUB-07490 belongs to Nenad Ilić (R0662)"
+  },
+  {
+   "id": "F02",
+   "pair": "P2",
+   "label": "false",
+   "category": "wrong-researcher",
+   "text": "Nenad Ilić has published day-ahead PV forecasting for distribution feeders using satellite cloud data.",
+   "sourceIds": [
+    "SYN-PUB-09619"
+   ],
+   "why": "SYN-PUB-09619 belongs to Tamara Simić (R0904)"
+  },
+  {
+   "id": "F03",
+   "pair": "P3",
+   "label": "false",
+   "category": "same-name",
+   "text": "Nina Mamužić has compared polyphenol profiles of Sambucus nigra accessions from the Pannonian Plain.",
+   "sourceIds": [
+    "SYN-PUB-01610"
+   ],
+   "why": "Paper is by the other Nina Mamužić (R0881), a pomologist"
+  },
+  {
+   "id": "F04",
+   "pair": "P4",
+   "label": "false",
+   "category": "same-name",
+   "text": "Vladan Dobanovački has measured Ktrans variation across white matter tracts with DCE-MRI.",
+   "sourceIds": [
+    "SYN-PUB-00202"
+   ],
+   "why": "Paper is by the other Vladan Dobanovački (R0191), a radiologist"
+  },
+  {
+   "id": "F05",
+   "pair": "P1",
+   "label": "false",
+   "category": "nonexistent-id",
+   "text": "Tamara Simić published a 2025 paper on feeder-level flexibility auctions.",
+   "sourceIds": [
+    "SYN-PUB-99999"
+   ],
+   "why": "Record does not exist"
+  },
+  {
+   "id": "F06",
+   "pair": "P2",
+   "label": "false",
+   "category": "nonexistent-id",
+   "text": "Nenad Ilić holds a patent on a drip irrigation controller.",
+   "sourceIds": [
+    "SYN-PAT-777"
+   ],
+   "why": "Record does not exist"
+  },
+  {
+   "id": "F07",
+   "pair": "P1",
+   "label": "false",
+   "category": "no-source",
+   "text": "Tamara Simić has already deployed forecasting models inside Azure for a utility.",
+   "sourceIds": [],
+   "why": "No source at all"
+  },
+  {
+   "id": "F08",
+   "pair": "P2",
+   "label": "false",
+   "category": "fabricated-quote",
+   "text": "Nenad Ilić describes his work as \"a ready-to-deploy commercial irrigation engine for large farms\".",
+   "sourceIds": [
+    "R0662"
+   ],
+   "why": "Quoted text is not in the record"
+  },
+  {
+   "id": "F09",
+   "pair": "P1",
+   "label": "false",
+   "category": "altered-number",
+   "text": "GridSense Analytics has 130 employees.",
+   "sourceIds": [
+    "C047"
+   ],
+   "why": "Record says 31"
+  },
+  {
+   "id": "F10",
+   "pair": "P1",
+   "label": "false",
+   "category": "altered-number",
+   "text": "GridSense wants a forecast error below 5 percent mean absolute percentage error.",
+   "sourceIds": [
+    "C047-CH2"
+   ],
+   "why": "Challenge says fifteen percent"
+  },
+  {
+   "id": "F11",
+   "pair": "P2",
+   "label": "false",
+   "category": "altered-number",
+   "text": "Njivomer Agro works with roughly 3,200 farms across western Vojvodina.",
+   "sourceIds": [
+    "C022"
+   ],
+   "why": "Record says roughly 320"
+  },
+  {
+   "id": "F12",
+   "pair": "P2",
+   "label": "false",
+   "category": "altered-number",
+   "text": "Njivomer maintains seven agrometeorological stations that send daily weather data.",
+   "sourceIds": [
+    "C022-CH3"
+   ],
+   "why": "Challenge says three"
+  },
+  {
+   "id": "F13",
+   "pair": "P1",
+   "label": "false",
+   "category": "altered-number",
+   "text": "Tamara Simić's gradient boosting load forecasting study used hourly data from 40 distribution substations.",
+   "sourceIds": [
+    "SYN-PUB-09621"
+   ],
+   "why": "Paper says 12 substations"
+  },
+  {
+   "id": "F14",
+   "pair": "P2",
+   "label": "false",
+   "category": "altered-number",
+   "text": "Nenad Ilić calibrated capacitive soil moisture probes across twelve soil types.",
+   "sourceIds": [
+    "SYN-PUB-07491"
+   ],
+   "why": "Paper says five soil types"
+  },
+  {
+   "id": "F15",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-company-fact",
+   "text": "GridSense Analytics was founded in Belgrade in 2010.",
+   "sourceIds": [
+    "C047"
+   ],
+   "why": "Founded in Novi Sad in 2017"
+  },
+  {
+   "id": "F16",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-company-fact",
+   "text": "GridSense Analytics sells mainly to distribution operators in Germany and Austria.",
+   "sourceIds": [
+    "C047"
+   ],
+   "why": "Customers are in Serbia, Bosnia and Herzegovina, North Macedonia"
+  },
+  {
+   "id": "F17",
+   "pair": "P2",
+   "label": "false",
+   "category": "wrong-company-fact",
+   "text": "Njivomer Agro's clients mainly grow rice and cotton.",
+   "sourceIds": [
+    "C022"
+   ],
+   "why": "Sunflower, maize, soy, sugar beet, wheat"
+  },
+  {
+   "id": "F18",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-company-fact",
+   "text": "GridSense needs the forecast to run on a large GPU cluster in AWS.",
+   "sourceIds": [
+    "C047-CH2"
+   ],
+   "why": "Small virtual machine in Azure"
+  },
+  {
+   "id": "F19",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-researcher-fact",
+   "text": "Tamara Simić has five years of industry experience at a distribution system operator.",
+   "sourceIds": [
+    "R0904"
+   ],
+   "why": "Industry experience: none listed"
+  },
+  {
+   "id": "F20",
+   "pair": "P1",
+   "label": "false",
+   "category": "wrong-researcher-fact",
+   "text": "Tamara Simić is a Full Professor.",
+   "sourceIds": [
+    "R0904"
+   ],
+   "why": "She is an Associate Professor"
+  },
+  {
+   "id": "F21",
+   "pair": "P2",
+   "label": "false",
+   "category": "wrong-researcher-fact",
+   "text": "Nenad Ilić holds a granted patent for a drone-mounted multispectral camera.",
+   "sourceIds": [
+    "SYN-PAT-001"
+   ],
+   "why": "Patent is a capacitive soil moisture probe"
+  },
+  {
+   "id": "F22",
+   "pair": "P2",
+   "label": "false",
+   "category": "wrong-researcher-fact",
+   "text": "Nenad Ilić's WATERWISE project was funded by Horizon Europe.",
+   "sourceIds": [
+    "SYN-PRJ-0003"
+   ],
+   "why": "Funded by the Provincial Secretariat for Higher Education"
+  },
+  {
+   "id": "T01",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Tamara Simić is an Associate Professor at the Faculty of Technical Sciences.",
+   "sourceIds": [
+    "R0904"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T02",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Tamara Simić has published day-ahead PV forecasting for distribution feeders using satellite cloud data.",
+   "sourceIds": [
+    "SYN-PUB-09619"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T03",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Tamara Simić takes part in the FLEXGRID-RS Horizon Europe project.",
+   "sourceIds": [
+    "SYN-PRJ-0010"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T04",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "GridSense Analytics has 31 employees and is based at NTP Novi Sad.",
+   "sourceIds": [
+    "C047"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T05",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "GridSense needs a per-feeder load forecast 24 hours ahead that runs on a small Azure virtual machine.",
+   "sourceIds": [
+    "C047-CH2"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T06",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Tamara Simić has worked on probabilistic short-term load forecasting with gradient boosting.",
+   "sourceIds": [
+    "SYN-PUB-09621"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T07",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Tamara Simić is open to supervising industrial PhD candidates.",
+   "sourceIds": [
+    "R0904"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T08",
+   "pair": "P1",
+   "label": "true",
+   "category": "true",
+   "text": "Some of GridSense's customer feeders now show reverse power flow in the afternoon because of rooftop PV.",
+   "sourceIds": [
+    "C047-CH2"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T09",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nenad Ilić evaluated Penman-Monteith based irrigation scheduling for sugar beet on chernozem.",
+   "sourceIds": [
+    "SYN-PUB-07490"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T10",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nenad Ilić holds a granted patent for a capacitive soil moisture probe with a multi-depth sensing array.",
+   "sourceIds": [
+    "SYN-PAT-001"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T11",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Njivomer Agro works with roughly 320 farms in western Vojvodina.",
+   "sourceIds": [
+    "C022"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T12",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Njivomer receives daily weather data from three agrometeorological stations it maintains.",
+   "sourceIds": [
+    "C022-CH3"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T13",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nenad Ilić led the WATERWISE project on irrigation advice for smallholder farmers.",
+   "sourceIds": [
+    "SYN-PRJ-0003"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T14",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nenad Ilić built and evaluated a smartphone app for real-time irrigation scheduling.",
+   "sourceIds": [
+    "SYN-PUB-07493"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T15",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nenad Ilić has no industry experience listed.",
+   "sourceIds": [
+    "R0662"
+   ],
+   "why": "Stated in the cited record"
+  },
+  {
+   "id": "T16",
+   "pair": "P2",
+   "label": "true",
+   "category": "true",
+   "text": "Nobody at Njivomer can implement evapotranspiration modelling, so building the engine in-house is a risk.",
+   "sourceIds": [
+    "C022-CH3"
+   ],
+   "why": "Stated in the cited record"
+  }
+ ]
+}
