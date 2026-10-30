@@ -14,6 +14,7 @@ export type TraceLine = {
 export class Trace {
 	readonly lines: TraceLine[] = []
 	private readonly start = Date.now()
+	onLine?: (line: TraceLine) => void
 
 	constructor(private readonly file?: string) {
 		if (file) {
@@ -30,6 +31,7 @@ export class Trace {
 		const line: TraceLine = { t: new Date().toISOString(), ms: this.elapsed(), type, agent, ...(pairId ? { pairId } : {}), ...(data === undefined ? {} : { data }) }
 		this.lines.push(line)
 		if (this.file) appendFileSync(this.file, JSON.stringify(line) + "\n")
+		this.onLine?.(line)
 		return line
 	}
 }
