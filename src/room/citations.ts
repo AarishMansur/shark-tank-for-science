@@ -42,7 +42,7 @@ export function lexicalSupport(ds: Dataset, claim: Pick<Claim, "text" | "sourceI
 	return words.filter((w) => pool.has(w)).length / words.length
 }
 
-export function sourceExcerpts(ds: Dataset, ids: string[], max = 2600): string {
+export function sourceExcerpts(ds: Dataset, ids: string[], max = 4000): string {
 	return ids
 		.map((id) => {
 			const rec = ds.sources.get(id)
