@@ -13,7 +13,7 @@ section{padding:12px 22px}h2{font-size:14px;color:var(--mut);text-transform:uppe
 .lane{display:flex;align-items:center;gap:10px;margin:3px 0}.lane b{width:130px;font-weight:500;font-size:12px;color:var(--mut)}
 .track{position:relative;flex:1;height:16px;background:var(--panel);border-radius:4px}
 .bar{position:absolute;top:2px;height:12px;border-radius:3px;opacity:.35;background:var(--acc)}.bar.on{opacity:1}
-.cursor{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--warn)}
+.playhead{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--warn)}
 .board{display:grid;grid-template-columns:repeat(6,minmax(170px,1fr));gap:10px}
 .col{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;min-height:120px}
 .col h3{margin:0 0 8px;font-size:12px;color:var(--mut);display:flex;justify-content:space-between}
@@ -42,7 +42,7 @@ document.getElementById("stats").textContent=D.cards.length+" pairs, "+D.cards.f
 const lanes=document.getElementById("lanes");
 for(const [agent,bars] of Object.entries(D.lanes)){const l=document.createElement("div");l.className="lane";l.innerHTML="<b>"+agent+"</b><div class=track></div>";const tr=l.querySelector(".track");
 for(const b of bars){const e=document.createElement("div");e.className="bar";e.dataset.s=b.start;e.dataset.e=b.end;e.title=b.task+" ("+fmt(b.end-b.start)+")";e.style.left=(b.start/D.total*100)+"%";e.style.width=Math.max(.3,(b.end-b.start)/D.total*100)+"%";tr.appendChild(e)}
-const c=document.createElement("div");c.className="cursor";tr.appendChild(c);lanes.appendChild(l)}
+const c=document.createElement("div");c.className="playhead";tr.appendChild(c);lanes.appendChild(l)}
 const board=document.getElementById("board");const colEls={};
 for(const [k,label] of COLS){const c=document.createElement("div");c.className="col";c.innerHTML="<h3><span>"+label+"</span><span class=n></span></h3>";board.appendChild(c);colEls[k]=c}
 const feed=document.getElementById("feed");
@@ -51,7 +51,7 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 let last={};
 function statusAt(c,ms){let s=null;for(const h of c.history){if(h.at<=ms)s=h.status}return s}
 function render(ms){document.getElementById("clock").textContent=fmt(ms)+" / "+fmt(D.total);
-document.querySelectorAll(".cursor").forEach(c=>c.style.left=(ms/D.total*100)+"%");
+document.querySelectorAll(".playhead").forEach(c=>c.style.left=(ms/D.total*100)+"%");
 document.querySelectorAll(".bar").forEach(b=>b.classList.toggle("on",+b.dataset.s<=ms&&+b.dataset.e>=ms));
 for(const [k] of COLS){colEls[k].querySelectorAll(".card").forEach(e=>e.remove())}
 const counts={};
